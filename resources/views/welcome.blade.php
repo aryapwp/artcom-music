@@ -180,7 +180,7 @@
 
     <div class="content">
         <img src="{{ asset('images/Artcom_Musicgroup_Logo_Weiß.png') }}" alt="Artcom Logo" class="logo">
-        <div class="domain">www.artcommusic.com</div>
+        <div class="domain">www.artcommusicgroup.com</div>
         <!--<a href="#" class="cta-button">Explore Releases</a>-->
         <!--<div class="center-nav">
             <a href="#" class="cta-button">Contact</a>
