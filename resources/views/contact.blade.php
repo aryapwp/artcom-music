@@ -37,6 +37,7 @@
 
         <div class="center-nav">
             <a href="/">Home</a>
+            <a href="/artist">Artist</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
