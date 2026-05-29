@@ -263,6 +263,8 @@
     .artist-tab:hover,
     .artist-tab.is-active {
         color: #fff;
+        text-decoration: underline;
+        text-underline-offset: 10px;
     }
 
     .artist-section {
