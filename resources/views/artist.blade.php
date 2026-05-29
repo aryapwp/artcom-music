@@ -65,7 +65,7 @@
 
 <main class="artist-page">
     <header class="artist-intro">
-        <h1>Artist</h1>
+        <h1 style="font-size: 2.5rem;">Artist</h1>
     </header>
 
     <nav class="artist-tabs" aria-label="Artist categories">

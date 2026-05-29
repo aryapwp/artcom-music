@@ -289,7 +289,10 @@
         letter-spacing: 0.32em;
         text-transform: uppercase;
     }
-
+    
+    .artist-section:active{
+        text-decoration: underline;
+    }
     .artist-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
