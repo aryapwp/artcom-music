@@ -127,8 +127,16 @@
     .center-nav {
         display: flex;
         justify-content: center;
-        gap: 30px;
         flex-wrap: wrap;
+        gap: 30px;
+        left: 0;
+        padding: 16px 20px;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+        background: rgba(8, 8, 8, 0.72);
+        backdrop-filter: blur(16px);
     }
 
     .center-nav a {
@@ -174,7 +182,7 @@
 
     /* IMPRESSUM */
     #impressum {
-        scroll-margin-top: 50px;
+        scroll-margin-top: 80px;
     }
 
     .impressum-section {
@@ -211,7 +219,7 @@
 
     /* FOOTER */
     #contact {
-        scroll-margin-top: 50px;
+        scroll-margin-top: 80px;
     }
 
     footer {
@@ -262,6 +270,12 @@
         .impressum-left {
             font-size: 1.8rem;
         }
+
+        .center-nav {
+            gap: 16px;
+            padding: 14px 12px;
+        }
+
         .impressum-right.grid {
             grid-template-columns: 1fr; /* jadi 1 kolom di HP */
         }
