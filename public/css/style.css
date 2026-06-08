@@ -102,16 +102,20 @@
     .center-nav {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 30px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 20;
+    }
+
+    .center-nav.is-fixed {
+        background: rgba(8, 8, 8, 0.72);
+        backdrop-filter: blur(16px);
         left: 0;
         padding: 16px 20px;
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 20;
-        background: rgba(8, 8, 8, 0.72);
-        backdrop-filter: blur(16px);
     }
 
     .center-nav a {
@@ -418,6 +422,9 @@
 
         .center-nav {
             gap: 16px;
+        }
+
+        .center-nav.is-fixed {
             padding: 14px 12px;
         }
 

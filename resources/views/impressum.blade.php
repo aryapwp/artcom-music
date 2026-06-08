@@ -127,16 +127,20 @@
     .center-nav {
         display: flex;
         justify-content: center;
-        flex-wrap: wrap;
         gap: 30px;
+        flex-wrap: wrap;
+        position: relative;
+        z-index: 20;
+    }
+
+    .center-nav.is-fixed {
+        background: rgba(8, 8, 8, 0.72);
+        backdrop-filter: blur(16px);
         left: 0;
         padding: 16px 20px;
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 20;
-        background: rgba(8, 8, 8, 0.72);
-        backdrop-filter: blur(16px);
     }
 
     .center-nav a {
@@ -273,6 +277,9 @@
 
         .center-nav {
             gap: 16px;
+        }
+
+        .center-nav.is-fixed {
             padding: 14px 12px;
         }
 
@@ -426,6 +433,26 @@
         bar.style.animationDelay = `${Math.random() * 2}s`;
         bar.style.height = `${Math.random() * 100}px`;
         container.appendChild(bar);
+    }
+
+    const centerNav = document.querySelector('.center-nav');
+
+    if (centerNav) {
+        let centerNavTop = 0;
+
+        const updateCenterNav = () => {
+            centerNav.classList.toggle('is-fixed', window.scrollY > centerNavTop);
+        };
+
+        const refreshCenterNavTop = () => {
+            centerNav.classList.remove('is-fixed');
+            centerNavTop = centerNav.getBoundingClientRect().top + window.scrollY;
+            updateCenterNav();
+        };
+
+        window.addEventListener('scroll', updateCenterNav, { passive: true });
+        window.addEventListener('resize', refreshCenterNavTop);
+        refreshCenterNavTop();
     }
 </script>
 

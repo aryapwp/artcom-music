@@ -134,6 +134,26 @@
         container.appendChild(bar);
     }
 
+    const centerNav = document.querySelector('.center-nav');
+
+    if (centerNav) {
+        let centerNavTop = 0;
+
+        const updateCenterNav = () => {
+            centerNav.classList.toggle('is-fixed', window.scrollY > centerNavTop);
+        };
+
+        const refreshCenterNavTop = () => {
+            centerNav.classList.remove('is-fixed');
+            centerNavTop = centerNav.getBoundingClientRect().top + window.scrollY;
+            updateCenterNav();
+        };
+
+        window.addEventListener('scroll', updateCenterNav, { passive: true });
+        window.addEventListener('resize', refreshCenterNavTop);
+        refreshCenterNavTop();
+    }
+
     const tabs = Array.from(document.querySelectorAll('.artist-tab'));
     const sections = Array.from(document.querySelectorAll('.artist-section'));
 
