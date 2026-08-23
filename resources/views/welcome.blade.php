@@ -267,6 +267,17 @@
 
 <body>
 
+@php
+    $placeholderImage = asset('images/Artcom_Musicgroup_Logo_Schwarz.jpg');
+
+    $releases = [
+        ['title' => 'Single 01', 'artist' => 'Artcom Music Group', 'type' => 'Single', 'image' => $placeholderImage, 'rights' => ['Rec']],
+        ['title' => 'Album 01', 'artist' => 'Artcom Music Group', 'type' => 'Album', 'image' => $placeholderImage, 'rights' => ['Pub']],
+        ['title' => 'Single 02', 'artist' => 'Artcom Music Group', 'type' => 'Single', 'image' => $placeholderImage, 'rights' => ['Rec', 'Pub']],
+        ['title' => 'Album 02', 'artist' => 'Artcom Music Group', 'type' => 'Album', 'image' => $placeholderImage, 'rights' => ['Rec']],
+    ];
+@endphp
+
 
 <section class="hero">
     <div class="vinyl vinyl-top-right"></div>
@@ -279,6 +290,7 @@
         <div class="center-nav">
             <a href="/">Home</a>
             <a href="/artist">Artist</a>
+            <a href="/artist-photos">Artist Photos</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -286,6 +298,33 @@
 
     <div class="waveform-container" id="waveform"></div>
 </section>
+
+<main class="home-main">
+    <section class="release-section" id="singles-albums" aria-labelledby="singles-albums-title">
+        <div class="section-kicker">Recording and Publishing are combined visually</div>
+        <div class="section-heading-row">
+            <h1 id="singles-albums-title">Singles & Albums</h1>
+            <p>Initial release grid prepared for the images already received. Future label logos can be added inside each hover state.</p>
+        </div>
+
+        <div class="release-grid">
+            @foreach ($releases as $release)
+                <article class="release-card">
+                    <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
+                    <div class="release-badges" aria-label="Rights">
+                        @foreach ($release['rights'] as $right)
+                            <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
+                        @endforeach
+                    </div>
+                    <div class="release-info">
+                        <h2>{{ $release['title'] }}</h2>
+                        <p>{{ $release['artist'] }} / {{ $release['type'] }}</p>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+    </section>
+</main>
 
 <section class="impressum-section" id="impressum">
     <div class="impressum-left">IMPRESSUM</div>

@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artist | Artcom Music Group</title>
-    <meta name="description" content="Artists represented by Artcom Music Group.">
-    <meta name="keywords" content="Artcom Music Group, Artist, Recording, Publishing, Music">
+    <title>Artist Photos | Artcom Music Group</title>
+    <meta name="description" content="Press photos and photo licensing requests for Artcom Music Group artists.">
+    <meta name="keywords" content="Artcom Music Group, Artist Photos, Press Photos, Licensing">
     <meta name="author" content="Artcom Music Group GmbH">
     <meta name="robots" content="index, follow">
 
-    <link rel="alternate" hreflang="de-DE" href="https://www.artcommusicgroup.com/artist" />
+    <link rel="alternate" hreflang="de-DE" href="https://www.artcommusicgroup.com/artist-photos" />
 
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.artcommusicgroup.com/artist">
-    <meta property="og:title" content="Artist | Artcom Music Group">
-    <meta property="og:description" content="Artists represented by Artcom Music Group.">
+    <meta property="og:url" content="https://www.artcommusicgroup.com/artist-photos">
+    <meta property="og:title" content="Artist Photos | Artcom Music Group">
+    <meta property="og:description" content="Press photos and photo licensing requests for Artcom Music Group artists.">
     <meta property="og:image" content="https://www.artcommusicgroup.com/images/Artcom_Musicgroup_Logo_Schwarz.jpg">
     <meta property="og:locale" content="de_DE">
 
@@ -27,13 +27,11 @@
     $logoWhite = asset('images/Artcom_Musicgroup_Logo_Weiß.png');
     $placeholderImage = asset('images/Artcom_Musicgroup_Logo_Schwarz.jpg');
 
-    $artists = [
-        ['name' => 'Artist 01', 'role' => 'Artist', 'image' => $placeholderImage, 'rights' => ['Rec']],
-        ['name' => 'Artist 02', 'role' => 'Artist', 'image' => $placeholderImage, 'rights' => ['Pub']],
-        ['name' => 'Artist 03', 'role' => 'Artist', 'image' => $placeholderImage, 'rights' => ['Rec', 'Pub']],
-        ['name' => 'Artist 04', 'role' => 'Artist', 'image' => $placeholderImage, 'rights' => ['Rec']],
-        ['name' => 'Artist 05', 'role' => 'Artist', 'image' => $placeholderImage, 'rights' => ['Pub']],
-        ['name' => 'Artist 06', 'role' => 'Artist', 'image' => $placeholderImage, 'rights' => ['Rec', 'Pub']],
+    $pressPhotos = [
+        ['name' => 'Artist 01', 'image' => $placeholderImage],
+        ['name' => 'Artist 02', 'image' => $placeholderImage],
+        ['name' => 'Artist 03', 'image' => $placeholderImage],
+        ['name' => 'Artist 04', 'image' => $placeholderImage],
     ];
 @endphp
 
@@ -47,8 +45,8 @@
 
         <div class="center-nav">
             <a href="/">Home</a>
-            <a href="/artist" aria-current="page">Artist</a>
-            <a href="/artist-photos">Artist Photos</a>
+            <a href="/artist">Artist</a>
+            <a href="/artist-photos" aria-current="page">Artist Photos</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -57,30 +55,26 @@
     <div class="waveform-container" id="waveform"></div>
 </section>
 
-<main class="artist-page">
-    <header class="artist-intro">
-        <h1 style="font-size: 2.5rem;">Artist</h1>
+<main class="artist-page photo-page">
+    <header class="artist-intro photo-intro">
+        <h1>Artist Photos</h1>
+        <p>Press photos only. Licensing requests can be started directly from each photo.</p>
     </header>
 
-    <section class="artist-section" id="artists" data-section="artists">
+    <section class="artist-section" aria-labelledby="press-photos-title">
         <div class="artist-section-heading">
-            <span>Recording and Publishing combined</span>
+            <span id="press-photos-title">Press photos</span>
         </div>
 
-        <div class="artist-grid">
-            @foreach ($artists as $artist)
-                <article class="artist-card">
+        <div class="artist-grid photo-grid">
+            @foreach ($pressPhotos as $photo)
+                <article class="artist-card photo-card">
                     <div class="artist-card-image">
-                        <img src="{{ $artist['image'] }}" alt="{{ $artist['name'] }}">
-                    </div>
-                    <div class="release-badges" aria-label="Rights">
-                        @foreach ($artist['rights'] as $right)
-                            <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
-                        @endforeach
+                        <img src="{{ $photo['image'] }}" alt="{{ $photo['name'] }} press photo">
                     </div>
                     <div class="artist-card-overlay">
-                        <h2>{{ $artist['name'] }}</h2>
-                        <span>{{ $artist['role'] }}</span>
+                        <h2>{{ $photo['name'] }}</h2>
+                        <a class="license-link" href="mailto:music@artcom-group.com?subject=Photo%20licensing%20request%20-%20{{ rawurlencode($photo['name']) }}">License photo</a>
                     </div>
                 </article>
             @endforeach
