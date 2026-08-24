@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260824-home-release">
 <!--
 <style>
     :root {
@@ -299,14 +299,14 @@
 </section>
 
 <main class="home-main">
-    <section class="release-section" id="singles-albums" aria-labelledby="singles-albums-title">
-        <div class="section-kicker">Recording and Publishing are combined visually</div>
-        <div class="section-heading-row">
+    <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
+        <div class="section-kicker home-release-kicker">Recording and Publishing are combined visually</div>
+        <div class="section-heading-row home-release-heading">
             <h1 id="singles-albums-title">Singles & Albums</h1>
             <p>Initial release grid prepared for the images already received. Future label logos can be added inside each hover state.</p>
         </div>
 
-        <div class="release-grid">
+        <div class="release-grid home-release-grid">
             @foreach ($releases as $release)
                 <article class="release-card">
                     <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">

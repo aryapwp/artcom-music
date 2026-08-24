@@ -135,6 +135,168 @@
         color: #fff;
     }
 
+    .home-main {
+        background: #f5f5f2;
+        color: #101010;
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .release-section,
+    .home-release-section {
+        margin: 0 auto;
+        max-width: 1280px;
+        padding: 92px clamp(20px, 7vw, 92px) 112px;
+        scroll-margin-top: 90px;
+        width: 100%;
+    }
+
+    .section-kicker {
+        color: #5f666c;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.22em;
+        margin-bottom: 12px;
+        text-transform: uppercase;
+    }
+
+    .section-heading-row,
+    .home-release-heading {
+        align-items: end;
+        display: grid;
+        gap: 24px;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 420px);
+        margin-bottom: 34px;
+    }
+
+    .section-heading-row h1 {
+        font-size: clamp(2.2rem, 6vw, 5.2rem);
+        line-height: 0.92;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .section-heading-row p {
+        color: #4c5358;
+        font-size: 0.92rem;
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    .release-grid,
+    .home-release-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        overflow: visible;
+    }
+
+    .release-card {
+        aspect-ratio: 4 / 3;
+        background: #111;
+        border-radius: 6px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+        color: #fff;
+        cursor: pointer;
+        isolation: isolate;
+        overflow: hidden;
+        position: relative;
+        transform: scale(1);
+        transition: box-shadow 0.28s ease, transform 0.28s ease;
+    }
+
+    .release-card::after,
+    .photo-card::after {
+        background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0.06) 62%);
+        content: "";
+        inset: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .release-card img {
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.9;
+        transform: scale(1);
+        transition: opacity 0.28s ease, transform 0.28s ease;
+        width: 100%;
+    }
+
+    .release-info {
+        bottom: 18px;
+        left: 18px;
+        position: absolute;
+        right: 18px;
+        z-index: 2;
+    }
+
+    .release-info h2 {
+        font-size: 1.04rem;
+        line-height: 1.15;
+        margin: 0 0 5px;
+    }
+
+    .release-info p {
+        color: rgba(255,255,255,0.82);
+        font-size: 0.78rem;
+        line-height: 1.35;
+        margin: 0;
+    }
+
+    .release-badges {
+        display: flex;
+        gap: 8px;
+        opacity: 0;
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        transform: translateY(-6px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 3;
+    }
+
+    .release-badge {
+        border-radius: 6px;
+        color: #fff;
+        font-size: 0.68rem;
+        font-weight: 700;
+        line-height: 1;
+        padding: 7px 9px;
+    }
+
+    .release-badge-rec {
+        background: #f05a3e;
+    }
+
+    .release-badge-pub {
+        background: #2f69e8;
+    }
+
+    .release-card:hover,
+    .release-card:focus-within,
+    .artist-card:hover,
+    .artist-card:focus-within {
+        box-shadow: 0 20px 46px rgba(0,0,0,0.25);
+        transform: scale(1.045);
+        z-index: 4;
+    }
+
+    .release-card:hover img,
+    .release-card:focus-within img {
+        opacity: 1;
+        transform: scale(1.06);
+    }
+
+    .release-card:hover .release-badges,
+    .release-card:focus-within .release-badges,
+    .artist-card:hover .release-badges,
+    .artist-card:focus-within .release-badges {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
     /* WAVEFORM */
     .waveform-container {
         position: absolute;
@@ -303,10 +465,7 @@
         letter-spacing: 0.32em;
         text-transform: uppercase;
     }
-    
-    .artist-section:active{
-        text-decoration: underline;
-    }
+
     .artist-grid {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -321,13 +480,15 @@
         position: relative;
         background: #111;
         isolation: isolate;
+        transform: scale(1);
+        transition: box-shadow 0.28s ease, transform 0.28s ease;
     }
 
     .artist-card::before {
-        background: linear-gradient(135deg, var(--card-accent), transparent 58%);
+        background: linear-gradient(135deg, rgba(0,242,255,0.9), transparent 58%);
         content: "";
         inset: 0;
-        opacity: 0.18;
+        opacity: 0;
         position: absolute;
         transition: opacity 0.25s ease;
         z-index: 1;
@@ -382,7 +543,7 @@
     }
 
     .artist-card:hover::before {
-        opacity: 0.34;
+        opacity: 0.16;
     }
 
     .artist-card:hover .artist-card-image {
@@ -394,6 +555,43 @@
     .artist-card:focus-within .artist-card-overlay {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .photo-intro {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 420px);
+    }
+
+    .photo-intro p {
+        align-self: end;
+        color: #c7c7c7;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    .photo-card {
+        aspect-ratio: 3 / 4;
+    }
+
+    .license-link {
+        border: 1px solid rgba(255,255,255,0.38);
+        border-radius: 6px;
+        color: #fff;
+        display: inline-flex;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        margin-top: 8px;
+        padding: 9px 11px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .license-link:hover {
+        border-color: var(--accent);
+        color: var(--accent);
     }
 
     /* 🔥 MOBILE FIX VINYL POSITION */
@@ -454,9 +652,44 @@
             gap: 12px;
         }
 
+        .release-section {
+            padding: 54px 20px 76px;
+        }
+
+        .section-heading-row,
+        .photo-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .release-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .release-info {
+            bottom: 14px;
+            left: 14px;
+            right: 14px;
+        }
+
+        .release-info h2 {
+            font-size: 0.88rem;
+        }
+
+        .release-info p {
+            font-size: 0.7rem;
+        }
+
         .artist-card-overlay {
             opacity: 1;
             padding: 16px;
+            transform: translateY(0);
+        }
+
+        .release-badges {
+            opacity: 1;
+            right: 10px;
+            top: 10px;
             transform: translateY(0);
         }
 
