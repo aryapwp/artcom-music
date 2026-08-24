@@ -9,7 +9,7 @@ Route::get('/artist', function () {
     return view('artist');
 });
 Route::get('/artist-photos', function () {
-    return view('artist-photos');
+    return redirect('/artist');
 });
 Route::get('/impressum', function () {
     return view('impressum');
