@@ -275,7 +275,12 @@
     }
 
     .release-card:hover,
-    .release-card:focus-within,
+    .release-card:focus-within {
+        box-shadow: 0 20px 46px rgba(0,0,0,0.25);
+        transform: scale(2);
+        z-index: 10;
+    }
+
     .artist-card:hover,
     .artist-card:focus-within {
         box-shadow: 0 20px 46px rgba(0,0,0,0.25);
