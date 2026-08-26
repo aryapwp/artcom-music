@@ -19,7 +19,7 @@
     <meta property="og:locale" content="de_DE">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260826-home-release-zoom">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260827-home-release-scale-reset">
 </head>
 
 <body>
