@@ -136,8 +136,8 @@
     }
 
     .home-main {
-        background: #f5f5f2;
-        color: #101010;
+        background: var(--bg);
+        color: var(--text);
         display: block;
         position: relative;
         z-index: 2;
@@ -146,57 +146,56 @@
     .release-section,
     .home-release-section {
         margin: 0 auto;
-        max-width: 1280px;
-        padding: 92px clamp(20px, 7vw, 92px) 112px;
+        max-width: 1180px;
+        padding: 72px 8% 110px;
         scroll-margin-top: 90px;
         width: 100%;
     }
 
     .section-kicker {
-        color: #5f666c;
+        color: rgba(255,255,255,0.42);
         font-size: 0.72rem;
         font-weight: 700;
-        letter-spacing: 0.22em;
-        margin-bottom: 12px;
+        letter-spacing: 0.32em;
+        margin-bottom: 22px;
         text-transform: uppercase;
     }
 
     .section-heading-row,
     .home-release-heading {
-        align-items: end;
-        display: grid;
-        gap: 24px;
-        grid-template-columns: minmax(0, 1fr) minmax(220px, 420px);
-        margin-bottom: 34px;
+        display: block;
+        margin-bottom: 40px;
     }
 
     .section-heading-row h1 {
-        font-size: clamp(2.2rem, 6vw, 5.2rem);
-        line-height: 0.92;
+        font-size: clamp(2.8rem, 8vw, 7rem);
+        font-weight: 900;
+        line-height: 0.9;
         margin: 0;
         text-transform: uppercase;
     }
 
     .section-heading-row p {
-        color: #4c5358;
-        font-size: 0.92rem;
+        color: #c7c7c7;
+        font-size: 0.95rem;
         line-height: 1.65;
-        margin: 0;
+        margin: 18px 0 0;
+        max-width: 620px;
     }
 
     .release-grid,
     .home-release-grid {
         display: grid;
         gap: 18px;
-        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
         overflow: visible;
     }
 
     .release-card {
-        aspect-ratio: 4 / 3;
+        aspect-ratio: 4 / 5;
         background: #111;
-        border-radius: 6px;
-        box-shadow: 0 12px 28px rgba(0,0,0,0.14);
+        border-radius: 8px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.2);
         color: #fff;
         cursor: pointer;
         isolation: isolate;
@@ -217,8 +216,9 @@
 
     .release-card img {
         height: 100%;
-        object-fit: cover;
-        opacity: 0.9;
+        object-fit: contain;
+        opacity: 0.86;
+        padding: 24px;
         transform: scale(1);
         transition: opacity 0.28s ease, transform 0.28s ease;
         width: 100%;
@@ -239,10 +239,13 @@
     }
 
     .release-info p {
-        color: rgba(255,255,255,0.82);
+        color: var(--accent);
         font-size: 0.78rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
         line-height: 1.35;
         margin: 0;
+        text-transform: uppercase;
     }
 
     .release-badges {
@@ -290,6 +293,7 @@
 
     .release-card:hover img,
     .release-card:focus-within img {
+        filter: grayscale(1) brightness(0.7);
         opacity: 1;
         transform: scale(1.06);
     }

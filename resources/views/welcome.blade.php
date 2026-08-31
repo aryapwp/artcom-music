@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260827-home-release-scale-12">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260828-home-release-artist-style">
 <!--
 <style>
     :root {
