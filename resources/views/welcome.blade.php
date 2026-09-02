@@ -24,56 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260902-release-carousel">
-<style>
-    .home-release-section .release-carousel {
-        margin: 0 -58px;
-        padding: 0 58px;
-        position: relative;
-    }
-
-    .home-release-section .home-release-grid {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        gap: 18px;
-        grid-template-columns: none !important;
-        overflow-x: auto;
-        overflow-y: hidden;
-        padding: 0 2px 18px;
-        scroll-behavior: smooth;
-        scroll-snap-type: x mandatory;
-        scrollbar-width: none;
-    }
-
-    .home-release-section .home-release-grid::-webkit-scrollbar {
-        display: none;
-    }
-
-    .home-release-section .release-card {
-        flex: 0 0 calc((100% - 54px) / 4) !important;
-        max-width: calc((100% - 54px) / 4) !important;
-        scroll-snap-align: start;
-    }
-
-    .home-release-section .release-card img {
-        height: 100%;
-        object-fit: cover;
-        padding: 0;
-        width: 100%;
-    }
-
-    @media (max-width: 768px) {
-        .home-release-section .release-carousel {
-            margin: 0 -12px;
-            padding: 0 38px;
-        }
-
-        .home-release-section .release-card {
-            flex-basis: calc((100% - 12px) / 2) !important;
-            max-width: calc((100% - 12px) / 2) !important;
-        }
-    }
-</style>
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260902-release-grid">
 <!--
 <style>
     :root {
@@ -363,31 +314,21 @@
             <p>Eine Auswahl aktueller Cover und Editionen aus dem Artcom Music Group Katalog.</p>
         </div>
 
-        <div class="release-carousel" aria-label="Singles and albums carousel">
-            <button class="release-carousel-button release-carousel-button-prev" type="button" aria-label="Previous releases">
-                &lsaquo;
-            </button>
-
-            <div class="release-grid home-release-grid" id="release-carousel-track">
-                @foreach ($releases as $release)
-                    <article class="release-card">
-                        <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
-                        <div class="release-badges" aria-label="Rights">
-                            @foreach ($release['rights'] as $right)
-                                <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
-                            @endforeach
-                        </div>
-                        <div class="release-info">
-                            <h2>{{ $release['title'] }}</h2>
-                            <p>{{ $release['artist'] }} / {{ $release['type'] }}</p>
-                        </div>
-                    </article>
-                @endforeach
-            </div>
-
-            <button class="release-carousel-button release-carousel-button-next" type="button" aria-label="Next releases">
-                &rsaquo;
-            </button>
+        <div class="release-grid home-release-grid">
+            @foreach ($releases as $release)
+                <article class="release-card">
+                    <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
+                    <div class="release-badges" aria-label="Rights">
+                        @foreach ($release['rights'] as $right)
+                            <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
+                        @endforeach
+                    </div>
+                    <div class="release-info">
+                        <h2>{{ $release['title'] }}</h2>
+                        <p>{{ $release['artist'] }} / {{ $release['type'] }}</p>
+                    </div>
+                </article>
+            @endforeach
         </div>
     </section>
 </main>
@@ -455,39 +396,6 @@
         window.addEventListener('scroll', updateCenterNav, { passive: true });
         window.addEventListener('resize', refreshCenterNavTop);
         refreshCenterNavTop();
-    }
-
-    const releaseTrack = document.getElementById('release-carousel-track');
-    const releasePrevButton = document.querySelector('.release-carousel-button-prev');
-    const releaseNextButton = document.querySelector('.release-carousel-button-next');
-
-    if (releaseTrack && releasePrevButton && releaseNextButton) {
-        const getReleaseStep = () => {
-            const firstCard = releaseTrack.querySelector('.release-card');
-            const styles = window.getComputedStyle(releaseTrack);
-            const gap = parseFloat(styles.columnGap || styles.gap || 0);
-
-            return firstCard ? firstCard.getBoundingClientRect().width + gap : releaseTrack.clientWidth;
-        };
-
-        const updateReleaseButtons = () => {
-            const maxScroll = releaseTrack.scrollWidth - releaseTrack.clientWidth - 1;
-
-            releasePrevButton.disabled = releaseTrack.scrollLeft <= 4;
-            releaseNextButton.disabled = releaseTrack.scrollLeft >= maxScroll;
-        };
-
-        releasePrevButton.addEventListener('click', () => {
-            releaseTrack.scrollBy({ left: -getReleaseStep(), behavior: 'smooth' });
-        });
-
-        releaseNextButton.addEventListener('click', () => {
-            releaseTrack.scrollBy({ left: getReleaseStep(), behavior: 'smooth' });
-        });
-
-        releaseTrack.addEventListener('scroll', updateReleaseButtons, { passive: true });
-        window.addEventListener('resize', updateReleaseButtons);
-        updateReleaseButtons();
     }
 </script>
 
