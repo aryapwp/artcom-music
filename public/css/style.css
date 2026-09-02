@@ -201,6 +201,12 @@
         scrollbar-width: none;
     }
 
+    .home-release-section .home-release-grid {
+        display: flex;
+        flex-wrap: nowrap;
+        grid-template-columns: none;
+    }
+
     .release-grid::-webkit-scrollbar,
     .home-release-grid::-webkit-scrollbar {
         display: none;
@@ -220,6 +226,11 @@
         scroll-snap-align: start;
         transform: scale(1);
         transition: box-shadow 0.28s ease, transform 0.28s ease;
+    }
+
+    .home-release-section .release-card {
+        flex: 0 0 calc((100% - 54px) / 4);
+        max-width: calc((100% - 54px) / 4);
     }
 
     .release-card::after,
@@ -738,6 +749,11 @@
 
         .release-card {
             flex-basis: calc((100% - 12px) / 2);
+        }
+
+        .home-release-section .release-card {
+            flex-basis: calc((100% - 12px) / 2);
+            max-width: calc((100% - 12px) / 2);
         }
 
         .release-carousel-button {

@@ -24,7 +24,56 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260828-home-release-artist-style">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260902-release-carousel">
+<style>
+    .home-release-section .release-carousel {
+        margin: 0 -58px;
+        padding: 0 58px;
+        position: relative;
+    }
+
+    .home-release-section .home-release-grid {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 18px;
+        grid-template-columns: none !important;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 2px 18px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .home-release-section .home-release-grid::-webkit-scrollbar {
+        display: none;
+    }
+
+    .home-release-section .release-card {
+        flex: 0 0 calc((100% - 54px) / 4) !important;
+        max-width: calc((100% - 54px) / 4) !important;
+        scroll-snap-align: start;
+    }
+
+    .home-release-section .release-card img {
+        height: 100%;
+        object-fit: cover;
+        padding: 0;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        .home-release-section .release-carousel {
+            margin: 0 -12px;
+            padding: 0 38px;
+        }
+
+        .home-release-section .release-card {
+            flex-basis: calc((100% - 12px) / 2) !important;
+            max-width: calc((100% - 12px) / 2) !important;
+        }
+    }
+</style>
 <!--
 <style>
     :root {
