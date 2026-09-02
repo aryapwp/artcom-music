@@ -192,7 +192,7 @@
     }
 
     .release-card {
-        aspect-ratio: 4 / 5;
+        aspect-ratio: 1 / 1;
         background: #111;
         border-radius: 8px;
         box-shadow: 0 12px 28px rgba(0,0,0,0.2);
@@ -216,9 +216,9 @@
 
     .release-card img {
         height: 100%;
-        object-fit: contain;
-        opacity: 0.86;
-        padding: 24px;
+        object-fit: cover;
+        opacity: 0.92;
+        padding: 0;
         transform: scale(1);
         transition: opacity 0.28s ease, transform 0.28s ease;
         width: 100%;

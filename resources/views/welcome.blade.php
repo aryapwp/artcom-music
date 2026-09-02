@@ -268,13 +268,21 @@
 <body>
 
 @php
-    $placeholderImage = asset('images/Artcom_Musicgroup_Logo_Schwarz.jpg');
-
     $releases = [
-        ['title' => 'Single 01', 'artist' => 'Artcom Music Group', 'type' => 'Single', 'image' => $placeholderImage, 'rights' => ['Rec']],
-        ['title' => 'Album 01', 'artist' => 'Artcom Music Group', 'type' => 'Album', 'image' => $placeholderImage, 'rights' => ['Pub']],
-        ['title' => 'Single 02', 'artist' => 'Artcom Music Group', 'type' => 'Single', 'image' => $placeholderImage, 'rights' => ['Rec', 'Pub']],
-        ['title' => 'Album 02', 'artist' => 'Artcom Music Group', 'type' => 'Album', 'image' => $placeholderImage, 'rights' => ['Rec']],
+        ['title' => 'Blick nach vorn', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/blick-nach-vorn.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Freiheit', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/freiheit.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Liebe siegt', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/liebe-siegt.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Marathon', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/marathon.jpg'), 'rights' => ['Rec']],
+        ['title' => 'Meine Zeit', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/meine-zeit.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Neue Perspektiven', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/neue-perspektiven.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Nur Liebe', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/nur-liebe.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Phönix aus der Asche', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/phoenix-aus-der-asche.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Wer liebt gewinnt', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/wer-liebt-gewinnt.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Die große Jubiläums-Edition', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/die-grosse-jubilaeums-edition.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Verdammt', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/verdammt.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Bunter Planet', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/bunter-planet.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Stärker', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/staerker.jpeg'), 'rights' => ['Rec']],
+        ['title' => 'Willkommen im Wunderland', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/willkommen-im-wunderland.jpeg'), 'rights' => ['Rec']],
     ];
 @endphp
 
@@ -300,10 +308,10 @@
 
 <main class="home-main">
     <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
-        <div class="section-kicker home-release-kicker">Recording and Publishing are combined visually</div>
+        <div class="section-kicker home-release-kicker">Selected releases</div>
         <div class="section-heading-row home-release-heading">
             <h1 id="singles-albums-title">Singles & Albums</h1>
-            <p>Initial release grid prepared for the images already received. Future label logos can be added inside each hover state.</p>
+            <p>Eine Auswahl aktueller Cover und Editionen aus dem Artcom Music Group Katalog.</p>
         </div>
 
         <div class="release-grid home-release-grid">
