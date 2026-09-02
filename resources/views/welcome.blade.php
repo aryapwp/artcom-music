@@ -314,21 +314,31 @@
             <p>Eine Auswahl aktueller Cover und Editionen aus dem Artcom Music Group Katalog.</p>
         </div>
 
-        <div class="release-grid home-release-grid">
-            @foreach ($releases as $release)
-                <article class="release-card">
-                    <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
-                    <div class="release-badges" aria-label="Rights">
-                        @foreach ($release['rights'] as $right)
-                            <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
-                        @endforeach
-                    </div>
-                    <div class="release-info">
-                        <h2>{{ $release['title'] }}</h2>
-                        <p>{{ $release['artist'] }} / {{ $release['type'] }}</p>
-                    </div>
-                </article>
-            @endforeach
+        <div class="release-carousel" aria-label="Singles and albums carousel">
+            <button class="release-carousel-button release-carousel-button-prev" type="button" aria-label="Previous releases">
+                &lsaquo;
+            </button>
+
+            <div class="release-grid home-release-grid" id="release-carousel-track">
+                @foreach ($releases as $release)
+                    <article class="release-card">
+                        <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
+                        <div class="release-badges" aria-label="Rights">
+                            @foreach ($release['rights'] as $right)
+                                <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
+                            @endforeach
+                        </div>
+                        <div class="release-info">
+                            <h2>{{ $release['title'] }}</h2>
+                            <p>{{ $release['artist'] }} / {{ $release['type'] }}</p>
+                        </div>
+                    </article>
+                @endforeach
+            </div>
+
+            <button class="release-carousel-button release-carousel-button-next" type="button" aria-label="Next releases">
+                &rsaquo;
+            </button>
         </div>
     </section>
 </main>
@@ -396,6 +406,39 @@
         window.addEventListener('scroll', updateCenterNav, { passive: true });
         window.addEventListener('resize', refreshCenterNavTop);
         refreshCenterNavTop();
+    }
+
+    const releaseTrack = document.getElementById('release-carousel-track');
+    const releasePrevButton = document.querySelector('.release-carousel-button-prev');
+    const releaseNextButton = document.querySelector('.release-carousel-button-next');
+
+    if (releaseTrack && releasePrevButton && releaseNextButton) {
+        const getReleaseStep = () => {
+            const firstCard = releaseTrack.querySelector('.release-card');
+            const styles = window.getComputedStyle(releaseTrack);
+            const gap = parseFloat(styles.columnGap || styles.gap || 0);
+
+            return firstCard ? firstCard.getBoundingClientRect().width + gap : releaseTrack.clientWidth;
+        };
+
+        const updateReleaseButtons = () => {
+            const maxScroll = releaseTrack.scrollWidth - releaseTrack.clientWidth - 1;
+
+            releasePrevButton.disabled = releaseTrack.scrollLeft <= 4;
+            releaseNextButton.disabled = releaseTrack.scrollLeft >= maxScroll;
+        };
+
+        releasePrevButton.addEventListener('click', () => {
+            releaseTrack.scrollBy({ left: -getReleaseStep(), behavior: 'smooth' });
+        });
+
+        releaseNextButton.addEventListener('click', () => {
+            releaseTrack.scrollBy({ left: getReleaseStep(), behavior: 'smooth' });
+        });
+
+        releaseTrack.addEventListener('scroll', updateReleaseButtons, { passive: true });
+        window.addEventListener('resize', updateReleaseButtons);
+        updateReleaseButtons();
     }
 </script>
 

@@ -183,12 +183,27 @@
         max-width: 620px;
     }
 
+    .release-carousel {
+        margin: 0 -58px;
+        padding: 0 58px;
+        position: relative;
+    }
+
     .release-grid,
     .home-release-grid {
-        display: grid;
+        display: flex;
         gap: 18px;
-        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-        overflow: visible;
+        overflow-x: auto;
+        overflow-y: hidden;
+        padding: 0 2px 18px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: none;
+    }
+
+    .release-grid::-webkit-scrollbar,
+    .home-release-grid::-webkit-scrollbar {
+        display: none;
     }
 
     .release-card {
@@ -198,9 +213,11 @@
         box-shadow: 0 12px 28px rgba(0,0,0,0.2);
         color: #fff;
         cursor: pointer;
+        flex: 0 0 calc((100% - 54px) / 4);
         isolation: isolate;
         overflow: hidden;
         position: relative;
+        scroll-snap-align: start;
         transform: scale(1);
         transition: box-shadow 0.28s ease, transform 0.28s ease;
     }
@@ -277,10 +294,49 @@
         background: #2f69e8;
     }
 
+    .release-carousel-button {
+        align-items: center;
+        background: rgba(8, 8, 8, 0.78);
+        border: 1px solid rgba(255,255,255,0.22);
+        border-radius: 50%;
+        color: #fff;
+        cursor: pointer;
+        display: flex;
+        font-size: 2.2rem;
+        height: 46px;
+        justify-content: center;
+        line-height: 1;
+        position: absolute;
+        top: calc(50% - 9px);
+        transform: translateY(-50%);
+        transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease, opacity 0.2s ease;
+        width: 46px;
+        z-index: 12;
+    }
+
+    .release-carousel-button:hover {
+        background: rgba(0,242,255,0.16);
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .release-carousel-button:disabled {
+        cursor: default;
+        opacity: 0.3;
+    }
+
+    .release-carousel-button-prev {
+        left: 0;
+    }
+
+    .release-carousel-button-next {
+        right: 0;
+    }
+
     .release-card:hover,
     .release-card:focus-within {
         box-shadow: 0 20px 46px rgba(0,0,0,0.25);
-        transform: scale(1.2);
+        transform: scale(1.04);
         z-index: 10;
     }
 
@@ -670,9 +726,24 @@
             grid-template-columns: 1fr;
         }
 
+        .release-carousel {
+            margin: 0 -12px;
+            padding: 0 38px;
+        }
+
         .release-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
             gap: 12px;
+            padding-bottom: 14px;
+        }
+
+        .release-card {
+            flex-basis: calc((100% - 12px) / 2);
+        }
+
+        .release-carousel-button {
+            font-size: 1.8rem;
+            height: 34px;
+            width: 34px;
         }
 
         .release-info {
