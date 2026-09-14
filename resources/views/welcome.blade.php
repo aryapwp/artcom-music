@@ -316,7 +316,7 @@
 
         <div class="release-grid home-release-grid">
             @foreach ($releases as $release)
-                <article class="release-card">
+                <article class="release-card" tabindex="0" aria-label="{{ $release['title'] }}">
                     <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
                     <div class="release-badges" aria-label="Rights">
                         @foreach ($release['rights'] as $right)
@@ -325,7 +325,6 @@
                     </div>
                     <div class="release-info">
                         <h2>{{ $release['title'] }}</h2>
-                        <p>{{ $release['artist'] }} / {{ $release['type'] }}</p>
                     </div>
                 </article>
             @endforeach

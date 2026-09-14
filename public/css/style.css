@@ -214,6 +214,11 @@
         z-index: 1;
     }
 
+    .release-card::after {
+        opacity: 0;
+        transition: opacity 0.24s ease;
+    }
+
     .release-card img {
         height: 100%;
         object-fit: cover;
@@ -227,8 +232,11 @@
     .release-info {
         bottom: 18px;
         left: 18px;
+        opacity: 0;
         position: absolute;
         right: 18px;
+        transform: translateY(10px);
+        transition: opacity 0.24s ease, transform 0.24s ease;
         z-index: 2;
     }
 
@@ -236,16 +244,6 @@
         font-size: 1.04rem;
         line-height: 1.15;
         margin: 0 0 5px;
-    }
-
-    .release-info p {
-        color: var(--accent);
-        font-size: 0.78rem;
-        font-weight: 700;
-        letter-spacing: 0.16em;
-        line-height: 1.35;
-        margin: 0;
-        text-transform: uppercase;
     }
 
     .release-badges {
@@ -261,27 +259,28 @@
     }
 
     .release-badge {
-        border-radius: 6px;
         color: #fff;
-        font-size: 0.68rem;
+        font-size: 0.72rem;
         font-weight: 700;
+        letter-spacing: 0.08em;
         line-height: 1;
-        padding: 7px 9px;
-    }
-
-    .release-badge-rec {
-        background: #f05a3e;
-    }
-
-    .release-badge-pub {
-        background: #2f69e8;
+        padding: 0;
+        text-shadow: 0 1px 8px rgba(0,0,0,0.75);
+        text-transform: uppercase;
     }
 
     .release-card:hover,
+    .release-card:focus,
+    .release-card:active,
     .release-card:focus-within {
         box-shadow: 0 20px 46px rgba(0,0,0,0.25);
         transform: scale(1.2);
         z-index: 10;
+    }
+
+    .release-card:focus-visible {
+        outline: 2px solid rgba(255,255,255,0.9);
+        outline-offset: 4px;
     }
 
     .artist-card:hover,
@@ -291,15 +290,30 @@
         z-index: 4;
     }
 
+    .release-card:hover::after,
+    .release-card:focus::after,
+    .release-card:focus-within::after,
+    .release-card:active::after {
+        opacity: 1;
+    }
+
     .release-card:hover img,
+    .release-card:focus img,
+    .release-card:active img,
     .release-card:focus-within img {
         filter: grayscale(1) brightness(0.7);
         opacity: 1;
         transform: scale(1.06);
     }
 
+    .release-card:hover .release-info,
+    .release-card:focus .release-info,
+    .release-card:focus-within .release-info,
+    .release-card:active .release-info,
     .release-card:hover .release-badges,
+    .release-card:focus .release-badges,
     .release-card:focus-within .release-badges,
+    .release-card:active .release-badges,
     .artist-card:hover .release-badges,
     .artist-card:focus-within .release-badges {
         opacity: 1;
@@ -685,10 +699,6 @@
             font-size: 0.88rem;
         }
 
-        .release-info p {
-            font-size: 0.7rem;
-        }
-
         .artist-card-overlay {
             opacity: 1;
             padding: 16px;
@@ -696,10 +706,8 @@
         }
 
         .release-badges {
-            opacity: 1;
             right: 10px;
             top: 10px;
-            transform: translateY(0);
         }
 
         .artist-card-overlay h2 {
