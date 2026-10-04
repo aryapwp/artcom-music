@@ -416,6 +416,184 @@
         min-height: 72vh;
     }
 
+    .news-hero,
+    .news-detail-hero {
+        min-height: 58vh;
+    }
+
+    .news-page,
+    .news-detail-page {
+        background: #f5f7f8;
+        color: #101417;
+        padding: 72px 8% 110px;
+    }
+
+    .news-intro,
+    .news-list,
+    .news-article {
+        margin: 0 auto;
+        max-width: 940px;
+    }
+
+    .news-intro {
+        margin-bottom: 32px;
+    }
+
+    .news-intro .section-kicker,
+    .news-meta span {
+        color: #008c95;
+    }
+
+    .news-intro h1 {
+        color: #101417;
+        font-size: clamp(2.8rem, 8vw, 6rem);
+        font-weight: 900;
+        line-height: 0.9;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .news-list {
+        display: grid;
+        gap: 0;
+    }
+
+    .news-row {
+        align-items: center;
+        border-bottom: 1px solid rgba(16,20,23,0.12);
+        color: #101417;
+        display: grid;
+        gap: 22px;
+        grid-template-columns: 220px minmax(0, 1fr);
+        padding: 20px 0;
+        text-decoration: none;
+        transition: transform 0.22s ease;
+    }
+
+    .news-row:hover,
+    .news-row:focus-visible {
+        transform: translateX(8px);
+    }
+
+    .news-row:focus-visible {
+        outline: 2px solid #008c95;
+        outline-offset: 6px;
+    }
+
+    .news-row img {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        height: 124px;
+        object-fit: cover;
+        width: 220px;
+    }
+
+    .news-row-copy h2 {
+        color: #101417;
+        font-size: clamp(1.15rem, 2.8vw, 1.72rem);
+        line-height: 1.22;
+        margin: 6px 0 8px;
+    }
+
+    .news-row-copy p {
+        color: #5e686d;
+        font-size: 0.94rem;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    .news-meta {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .news-meta time {
+        color: #7a858a;
+        font-weight: 700;
+    }
+
+    .news-article {
+        max-width: 900px;
+    }
+
+    .news-back-link,
+    .news-pdf-link {
+        border: 1px solid rgba(0,140,149,0.5);
+        border-radius: 6px;
+        color: #006f76;
+        display: inline-flex;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        margin-bottom: 28px;
+        padding: 10px 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .news-pdf-link {
+        margin: 16px 0 0;
+    }
+
+    .news-back-link:hover,
+    .news-pdf-link:hover {
+        background: #008c95;
+        color: #fff;
+    }
+
+    .news-article h1 {
+        color: #101417;
+        font-size: clamp(2.2rem, 6vw, 4.8rem);
+        font-weight: 900;
+        line-height: 0.98;
+        margin: 14px 0 14px;
+        max-width: 840px;
+        text-transform: uppercase;
+    }
+
+    .news-subtitle {
+        color: #5e686d;
+        font-size: 1.16rem;
+        line-height: 1.55;
+        margin: 0 0 34px;
+    }
+
+    .news-article-media {
+        margin: 0 0 34px;
+    }
+
+    .news-article-media img {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .news-article-media figcaption {
+        color: #7a858a;
+        font-size: 0.76rem;
+        line-height: 1.45;
+        margin-top: 10px;
+    }
+
+    .news-article-body {
+        color: #263035;
+        font-size: 1rem;
+        line-height: 1.78;
+        max-width: 760px;
+    }
+
+    .news-article-body p {
+        margin: 0 0 18px;
+    }
+
     .artist-page {
         padding: 72px 8% 110px;
     }
@@ -654,6 +832,48 @@
 
         .artist-hero {
             min-height: 68vh;
+        }
+
+        .news-hero,
+        .news-detail-hero {
+            min-height: 56vh;
+        }
+
+        .news-page,
+        .news-detail-page {
+            padding: 54px 20px 76px;
+        }
+
+        .news-row {
+            align-items: start;
+            gap: 14px;
+            grid-template-columns: 120px minmax(0, 1fr);
+            padding: 16px 0;
+        }
+
+        .news-row:hover,
+        .news-row:focus-visible {
+            transform: none;
+        }
+
+        .news-row img {
+            height: 82px;
+            width: 120px;
+        }
+
+        .news-row-copy h2 {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .news-row-copy p {
+            display: none;
+        }
+
+        .news-meta {
+            gap: 8px;
+            font-size: 0.62rem;
+            letter-spacing: 0.05em;
         }
 
         .artist-page {
