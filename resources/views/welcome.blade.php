@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260903-release-pub">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261005-news-highlight">
 <!--
 <style>
     :root {
@@ -268,6 +268,8 @@
 <body>
 
 @php
+    $latestNews = config('news.0');
+
     $releases = [
         ['title' => 'Blick nach vorn', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/blick-nach-vorn.jpeg'), 'rights' => ['Pub']],
         ['title' => 'Freiheit', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/freiheit.jpeg'), 'rights' => ['Pub']],
@@ -331,6 +333,29 @@
             @endforeach
         </div>
     </section>
+
+    @if ($latestNews)
+        <section class="home-news-highlight" aria-labelledby="home-news-title">
+            <div class="home-news-highlight-inner">
+                <div class="home-news-copy">
+                    <div class="section-kicker">Latest news</div>
+                    <div class="news-meta">
+                        <span>{{ $latestNews['category'] }}</span>
+                        <time datetime="{{ \Carbon\Carbon::createFromFormat('d.m.Y', $latestNews['date'])->format('Y-m-d') }}">{{ $latestNews['date'] }} {{ $latestNews['time'] }}</time>
+                    </div>
+                    <h1 id="home-news-title">{{ $latestNews['title'] }}</h1>
+                    <p>{{ $latestNews['excerpt'] }}</p>
+                    <div class="home-news-actions">
+                        <a class="home-news-primary" href="{{ url('/news/' . $latestNews['slug']) }}">Read article</a>
+                        <a class="home-news-secondary" href="/news">Go to News</a>
+                    </div>
+                </div>
+                <a class="home-news-media" href="{{ url('/news/' . $latestNews['slug']) }}" aria-label="{{ $latestNews['title'] }}">
+                    <img src="{{ asset($latestNews['image']) }}" alt="{{ $latestNews['title'] }}">
+                </a>
+            </div>
+        </section>
+    @endif
 </main>
 
 <section class="impressum-section" id="impressum">
