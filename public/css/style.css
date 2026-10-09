@@ -331,7 +331,7 @@
         align-items: stretch;
         border-top: 1px solid rgba(255,255,255,0.12);
         display: grid;
-        gap: 34px;
+        gap: 56px;
         grid-template-columns: minmax(0, 1fr) minmax(320px, 48%);
         padding-top: 58px;
     }
@@ -345,9 +345,9 @@
     }
 
     .home-news-copy h1 {
-        font-size: clamp(2rem, 5vw, 4.4rem);
+        font-size: clamp(1.65rem, 3.7vw, 3.35rem);
         font-weight: 900;
-        line-height: 0.98;
+        line-height: 1.04;
         margin: 16px 0;
         max-width: 720px;
         text-transform: uppercase;
@@ -955,7 +955,7 @@
         }
 
         .home-news-highlight-inner {
-            gap: 24px;
+            gap: 32px;
             grid-template-columns: 1fr;
             padding-top: 42px;
         }
@@ -966,7 +966,7 @@
         }
 
         .home-news-copy h1 {
-            font-size: clamp(1.8rem, 12vw, 3.2rem);
+            font-size: clamp(1.45rem, 9vw, 2.35rem);
         }
 
         .news-row {
