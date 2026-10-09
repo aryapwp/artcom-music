@@ -345,11 +345,12 @@
     }
 
     .home-news-copy h1 {
-        font-size: clamp(1.65rem, 3.7vw, 3.35rem);
+        font-size: clamp(1.4rem, 2.8vw, 1.85rem);
         font-weight: 900;
-        line-height: 1.04;
+        line-height: 1.12;
         margin: 16px 0;
         max-width: 720px;
+        overflow-wrap: anywhere;
         text-transform: uppercase;
     }
 
@@ -966,7 +967,7 @@
         }
 
         .home-news-copy h1 {
-            font-size: clamp(1.45rem, 9vw, 2.35rem);
+            font-size: clamp(1.25rem, 7vw, 1.75rem);
         }
 
         .news-row {
