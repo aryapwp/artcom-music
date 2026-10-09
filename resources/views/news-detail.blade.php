@@ -67,7 +67,6 @@
             @endforeach
         </div>
 
-        <a class="news-pdf-link" href="{{ asset($item['pdf']) }}" target="_blank" rel="noopener">Pressemitteilung öffnen</a>
     </article>
 </main>
 

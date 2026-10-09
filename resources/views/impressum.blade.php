@@ -325,7 +325,7 @@
             Axel-Springer-Str. 52, 10969 Berlin
     
             <strong>Managing director</strong>
-            Marko Wünsch
+            Ken Otremba
         </div>
     
         <div>
