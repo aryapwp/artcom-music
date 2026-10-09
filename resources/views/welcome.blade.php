@@ -369,7 +369,7 @@
         Axel-Springer-Str. 52, 10969 Berlin
 
         <strong>Managing director</strong>
-        Kevin Otremba
+        Ken Otremba
 
         <strong>Company registration number (HRB)</strong>
         HRB 212364 B Amtsgericht Berlin Charlottenburg
