@@ -20,10 +20,7 @@ return [
             'Felix Kahlbaum, Director A&R:',
             '„Wir haben Karsten Walter als Künstler kennengelernt, der eine klare Vorstellung davon hat, wo er musikalisch hinmöchte und gleichzeitig offen für neue Impulse ist. Genau diese Kombination macht die Zusammenarbeit für uns so spannend. Wir freuen uns darauf, gemeinsam mit Karsten an seinem neuen Album zu arbeiten und seine musikalische Entwicklung langfristig zu begleiten.“',
             '2026 ist für Karsten ein Jahr voller kreativer Energie: neue Musik, neue Impulse und ein Team, das sein Potenzial fördert und ihm Raum gibt, seine künstlerische Identität weiter zu formen.',
-            'Kontakt:',
-            'Felix Kahlbaum',
-            'music@artcom-group.com',
-            'M: +49 172 6106075',
+            
         ],
     ],
     [
@@ -43,9 +40,7 @@ return [
             'Daniela Alfinito wechselt nicht nur zur Artcom Music Group, sondern sie geht musikalisch neue Wege und bleibt sich dennoch treu. Sie arbeitet weiterhin mit Autoren wie Matthias Teriet, Marvin Trecha, Jascha Welzel und Alexander Scholz zusammen. Seit über einem Jahrzehnt ist sie ihren Autorenteams treu. Mit ihrem neuen Studioalbum geht sie aber musikalisch neue Wege. Ihr Sound ist komplett überarbeitet. Daniela Alfinito klingt wertiger, anspruchsvoller und zeitentsprechend als je zuvor. Sie arbeitet hier mit Hens Hensen zusammen, der sich für die Produktion verantwortlich zeigt. Die erste Single „Seelenflüstern“ aus ihrem gleichnamigen Album stellt das eindrucksvoll unter Beweis. Ihre Single erscheint am 2. Oktober 2026, die das neue Studioalbum für Januar 2027 ankündigt.',
             'Daniela Alfinito: „Ich blicke zurück und bin vor allem dankbar. Dankbar für die Menschen, die meine Musik über all die Jahre begleitet haben, und für die vielen Geschichten, die wir gemeinsam erlebt haben. Für mich ist es wichtig, meinen eigenen Weg zu gehen und dabei authentisch zu bleiben. Die Gespräche mit der Artcom Music Group haben sich von Anfang an richtig angefühlt, und deshalb freue ich mich sehr auf alles, was vor uns liegt.“',
             'Marko Wünsch: „Daniela Alfinito hat alles erreicht, was sie nicht zu träumen gewagt hat. Sie legt sich nicht auf die faule Haut. Nein, sie setzt alles auf eine Karte und wagt den Neuanfang. Absoluter Respekt! Neues Label, neuer Produzent, neuer Sound - Ein grandioser Neustart! Mein Team und ich sind stolz, mit Daniela in die neue Zukunft zu gehen. Die Zukunft beginnt jetzt! Das Schlagerjahr 2027 gehört Daniela Alfinito.“',
-            'Kontakt:',
-            'Florian Mollitor',
-            'music@artcom-group.com',
+            
         ],
     ],
     [
@@ -64,9 +59,7 @@ return [
             'Das neue Studioalbum ist ab sofort im Vorverkauf erhältlich und wird im Januar 2027 veröffentlicht. Seine Authentizität und unverwechselbare Stimme geben dem Album die besondere Note. Norman Langen arbeitete hier u.a. mit Autoren wie Anja Krabbe, Alexander Scholz, Hens Hensen und Tom Marquardt. Auch das unterstreicht sein Bekenntnis zum Deutschen Schlager. Für die Produktion ist federführend Hens Hensen verantwortlich.',
             'Norman Langen: „Ich freue mich riesig über diese Zusammenarbeit. Ein neuer Abschnitt beginnt, mit einem Team, das meine Vision teilt und mich versteht. Die Artcom Music Group ist genau der richtige Partner, um meinen musikalischen Weg zu gehen. Ich brenne darauf, neue Songs zu präsentieren. Ich kann es kaum noch erwarten.“',
             'Marko Wünsch: „Seit über einem Jahrzehnt arbeiten wir bereits intensiv zusammen. Ich freue mich sehr, dass wir diesen neuen Weg gemeinsam gehen. Norman steht für mich nicht nur für Kontinuität und absolute Professionalität, sondern auch für unfassbares Talent: Norman ist und bleibt der große Sympathieträger des Deutschen Schlagers!“',
-            'Kontakt:',
-            'Florian Mollitor',
-            'music@artcom-group.com',
+            
         ],
     ],
 ];

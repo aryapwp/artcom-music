@@ -369,6 +369,7 @@
         Axel-Springer-Str. 52, 10969 Berlin
 
         <strong>Managing director</strong>
+        Marko Wünsch<br>
         Ken Otremba
 
         <strong>Company registration number (HRB)</strong>
