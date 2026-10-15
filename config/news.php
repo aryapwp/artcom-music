@@ -2,6 +2,29 @@
 
 return [
     [
+        'slug' => 'gaby-baginsky-artcom-music-group',
+        'category' => 'Signing News',
+        'date' => '14.10.2026',
+        'time' => '10:00',
+        'title' => 'Gaby Baginsky unterschreibt bei der Artcom Music Group',
+        'subtitle' => '„Von hier an noch weiter“',
+        'image' => 'images/news/gaby-baginsky-signing.jpeg',
+        'pdf' => 'files/news/pressemitteilung-gaby-baginsky-artcom.pdf',
+        'caption' => 'v. l. Felix Kahlbaum (Director A&R), Gaby Baginsky, Florian Mollitor (Senior A&R & Product Manager)',
+        'excerpt' => 'Gaby Baginsky und die Artcom Music Group haben eine langfristige Zusammenarbeit vereinbart. „Von hier an noch weiter“ heißt, passend zum Start dieser gemeinsamen Zusammenarbeit das neue Studioalbum der Schlagersängerin, das sie für Ende November bei der Artcom Music Group ankündigt.',
+        'body' => [
+            'Gaby Baginsky und die Artcom Music Group haben eine langfristige Zusammenarbeit vereinbart. „Von hier an noch weiter“ heißt, passend zum Start dieser gemeinsamen Zusammenarbeit das neue Studioalbum der Schlagersängerin, das sie für Ende November bei der Artcom Music Group ankündigt.',
+            'Seit ihrer ersten Single im Jahr 1970 hat Gaby Baginsky die Schlagerszene geprägt wie kaum eine andere. 1975 gelang ihr mit „Häng die Gitarre nicht an den Nagel“ der große Durchbruch, „Der Rum von Barbados“, „Diebe kommen am Abend“ oder „Wer hat dir das Küssen beigebracht“ sind Titel, die Generationen von Schlagerfans kennen. 25 Auftritte in der ZDF-Hitparade, über 20 Alben und mehr als 80 Singles sprechen eine deutliche Sprache: Gaby Baginsky ist aus dem Schlager nicht wegzudenken!',
+            'Gaby Baginsky:',
+            '„Das Team von Artcom Music Group hat mich ganz wunderbar aufgenommen. Ich freue mich sehr auf die langfristige Zusammenarbeit mit dem Team. Das neue Album gibt genau mein Lebensmotto wieder: „Von hier an noch weiter“!',
+            'Felix Kahlbaum, Director A&R:',
+            '„Gaby Baginsky prägt seit Jahrzehnten die deutsche Musiklandschaft mit ihrer unverkennbaren Stimme. Sie ist eine Künstlerin, die mit ihrer unglaublich positiven und herzlichen Art jeden ansteckt. Wir freuen uns sehr auf die gemeinsame Zusammenarbeit.“',
+            'Mit ihrem neuen Album macht sie klar, dass sie noch lange nicht fertig ist. Sie bewahrt sich ihre eigene Handschrift und bleibt trotzdem offen für neue Impulse. „Von hier an noch weiter“ ist deshalb kein Album, das nur zurückschaut. Es nimmt die großen Erfolge mit, gibt ihnen neuen Raum und verbindet sie mit der Gegenwart einer Sängerin, die noch immer Lust auf Musik, Begegnungen und neue Geschichten hat.',
+            'Das neue Studioalbum „Von hier an noch weiter“ von Gaby Baginsky erscheint am 27. November 2026 bei der Artcom Music Group.',
+            'Kontakt: music@artcom-group.com',
+        ],
+    ],
+    [
         'slug' => 'karsten-walter-artcom-music-group',
         'category' => 'Signing News',
         'date' => '06.10.2026',
