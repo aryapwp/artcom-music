@@ -135,6 +135,298 @@
         color: #fff;
     }
 
+    .home-main {
+        background: var(--bg);
+        color: var(--text);
+        display: block;
+        position: relative;
+        z-index: 2;
+    }
+
+    .release-section,
+    .home-release-section {
+        margin: 0 auto;
+        max-width: 1180px;
+        padding: 72px 8% 110px;
+        scroll-margin-top: 90px;
+        width: 100%;
+    }
+
+    .section-kicker {
+        color: rgba(255,255,255,0.42);
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.32em;
+        margin-bottom: 22px;
+        text-transform: uppercase;
+    }
+
+    .section-heading-row,
+    .home-release-heading {
+        display: block;
+        margin-bottom: 40px;
+    }
+
+    .section-heading-row h1 {
+        font-size: clamp(2.8rem, 8vw, 7rem);
+        font-weight: 900;
+        line-height: 0.9;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .section-heading-row p {
+        color: #c7c7c7;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin: 18px 0 0;
+        max-width: 620px;
+    }
+
+    .release-grid,
+    .home-release-grid {
+        display: grid;
+        gap: 18px;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        overflow: visible;
+    }
+
+    .release-card {
+        aspect-ratio: 1 / 1;
+        background: #111;
+        border-radius: 8px;
+        box-shadow: 0 12px 28px rgba(0,0,0,0.2);
+        color: #fff;
+        cursor: pointer;
+        isolation: isolate;
+        overflow: hidden;
+        position: relative;
+        transform: scale(1);
+        transition: box-shadow 0.28s ease, transform 0.28s ease;
+    }
+
+    .release-card::after,
+    .photo-card::after {
+        background: linear-gradient(to top, rgba(0,0,0,0.78), rgba(0,0,0,0.06) 62%);
+        content: "";
+        inset: 0;
+        position: absolute;
+        z-index: 1;
+    }
+
+    .release-card::after {
+        opacity: 0;
+        transition: opacity 0.24s ease;
+    }
+
+    .release-card img {
+        height: 100%;
+        object-fit: cover;
+        opacity: 0.92;
+        padding: 0;
+        transform: scale(1);
+        transition: opacity 0.28s ease, transform 0.28s ease;
+        width: 100%;
+    }
+
+    .release-info {
+        bottom: 18px;
+        left: 18px;
+        opacity: 0;
+        position: absolute;
+        right: 18px;
+        transform: translateY(10px);
+        transition: opacity 0.24s ease, transform 0.24s ease;
+        z-index: 2;
+    }
+
+    .release-info h2 {
+        font-size: 1.04rem;
+        line-height: 1.15;
+        margin: 0 0 5px;
+    }
+
+    .release-badges {
+        display: flex;
+        gap: 8px;
+        opacity: 0;
+        position: absolute;
+        right: 14px;
+        top: 14px;
+        transform: translateY(-6px);
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        z-index: 3;
+    }
+
+    .release-badge {
+        color: #fff;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        line-height: 1;
+        padding: 0;
+        text-shadow: 0 1px 8px rgba(0,0,0,0.75);
+        text-transform: uppercase;
+    }
+
+    .release-card:hover,
+    .release-card:focus,
+    .release-card:active,
+    .release-card:focus-within {
+        box-shadow: 0 20px 46px rgba(0,0,0,0.25);
+        transform: scale(1.2);
+        z-index: 10;
+    }
+
+    .release-card:focus-visible {
+        outline: 2px solid rgba(255,255,255,0.9);
+        outline-offset: 4px;
+    }
+
+    .artist-card:hover,
+    .artist-card:focus-within {
+        box-shadow: 0 20px 46px rgba(0,0,0,0.25);
+        transform: scale(1.045);
+        z-index: 4;
+    }
+
+    .release-card:hover::after,
+    .release-card:focus::after,
+    .release-card:focus-within::after,
+    .release-card:active::after {
+        opacity: 1;
+    }
+
+    .release-card:hover img,
+    .release-card:focus img,
+    .release-card:active img,
+    .release-card:focus-within img {
+        filter: grayscale(1) brightness(0.7);
+        opacity: 1;
+        transform: scale(1.06);
+    }
+
+    .release-card:hover .release-info,
+    .release-card:focus .release-info,
+    .release-card:focus-within .release-info,
+    .release-card:active .release-info,
+    .release-card:hover .release-badges,
+    .release-card:focus .release-badges,
+    .release-card:focus-within .release-badges,
+    .release-card:active .release-badges,
+    .artist-card:hover .release-badges,
+    .artist-card:focus-within .release-badges {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .home-news-highlight {
+        margin: 0 auto;
+        max-width: 1180px;
+        padding: 0 8% 110px;
+        width: 100%;
+    }
+
+    .home-news-highlight-inner {
+        align-items: stretch;
+        border-top: 1px solid rgba(255,255,255,0.12);
+        display: grid;
+        gap: 56px;
+        grid-template-columns: minmax(0, 1fr) minmax(320px, 48%);
+        padding-top: 58px;
+    }
+
+    .home-news-copy {
+        align-self: center;
+    }
+
+    .home-news-copy .section-kicker {
+        margin-bottom: 18px;
+    }
+
+    .home-news-copy h1 {
+        font-size: clamp(1.4rem, 2.8vw, 1.85rem);
+        font-weight: 900;
+        line-height: 1.12;
+        margin: 16px 0;
+        max-width: 720px;
+        overflow-wrap: anywhere;
+        text-transform: uppercase;
+    }
+
+    .home-news-copy p {
+        color: #c7c7c7;
+        font-size: 0.98rem;
+        line-height: 1.7;
+        margin: 0;
+        max-width: 640px;
+    }
+
+    .home-news-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .home-news-primary,
+    .home-news-secondary {
+        border-radius: 6px;
+        display: inline-flex;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        padding: 12px 14px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .home-news-primary {
+        background: var(--accent);
+        color: #020607;
+    }
+
+    .home-news-secondary {
+        border: 1px solid rgba(255,255,255,0.34);
+        color: #fff;
+    }
+
+    .home-news-primary:hover {
+        background: #fff;
+    }
+
+    .home-news-secondary:hover {
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+    .home-news-media {
+        background: #111;
+        border-radius: 8px;
+        min-height: 320px;
+        overflow: hidden;
+        position: relative;
+    }
+
+    .home-news-media::after {
+        background: linear-gradient(to top, rgba(0,0,0,0.44), transparent 62%);
+        content: "";
+        inset: 0;
+        position: absolute;
+    }
+
+    .home-news-media img {
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.28s ease, filter 0.28s ease;
+        width: 100%;
+    }
+
+    .home-news-media:hover img {
+        filter: grayscale(1) brightness(0.76);
+        transform: scale(1.04);
+    }
+
     /* WAVEFORM */
     .waveform-container {
         position: absolute;
@@ -231,6 +523,184 @@
         min-height: 72vh;
     }
 
+    .news-hero,
+    .news-detail-hero {
+        min-height: 58vh;
+    }
+
+    .news-page,
+    .news-detail-page {
+        background: var(--bg);
+        color: var(--text);
+        padding: 72px 8% 110px;
+    }
+
+    .news-intro,
+    .news-list,
+    .news-article {
+        margin: 0 auto;
+        max-width: 940px;
+    }
+
+    .news-intro {
+        margin-bottom: 32px;
+    }
+
+    .news-intro .section-kicker,
+    .news-meta span {
+        color: var(--accent);
+    }
+
+    .news-intro h1 {
+        color: #fff;
+        font-size: clamp(2.8rem, 8vw, 6rem);
+        font-weight: 900;
+        line-height: 0.9;
+        margin: 0;
+        text-transform: uppercase;
+    }
+
+    .news-list {
+        display: grid;
+        gap: 0;
+    }
+
+    .news-row {
+        align-items: center;
+        border-bottom: 1px solid rgba(255,255,255,0.12);
+        color: #fff;
+        display: grid;
+        gap: 22px;
+        grid-template-columns: 220px minmax(0, 1fr);
+        padding: 20px 0;
+        text-decoration: none;
+        transition: transform 0.22s ease;
+    }
+
+    .news-row:hover,
+    .news-row:focus-visible {
+        transform: translateX(8px);
+    }
+
+    .news-row:focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 6px;
+    }
+
+    .news-row img {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        height: 124px;
+        object-fit: cover;
+        width: 220px;
+    }
+
+    .news-row-copy h2 {
+        color: #fff;
+        font-size: clamp(1.15rem, 2.8vw, 1.72rem);
+        line-height: 1.22;
+        margin: 6px 0 8px;
+    }
+
+    .news-row-copy p {
+        color: #c7c7c7;
+        font-size: 0.94rem;
+        line-height: 1.55;
+        margin: 0;
+    }
+
+    .news-meta {
+        align-items: center;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+    }
+
+    .news-meta time {
+        color: rgba(255,255,255,0.52);
+        font-weight: 700;
+    }
+
+    .news-article {
+        max-width: 900px;
+    }
+
+    .news-back-link,
+    .news-pdf-link {
+        border: 1px solid rgba(0,140,149,0.5);
+        border-radius: 6px;
+        color: var(--accent);
+        display: inline-flex;
+        font-size: 0.72rem;
+        font-weight: 700;
+        letter-spacing: 0.16em;
+        margin-bottom: 28px;
+        padding: 10px 12px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .news-pdf-link {
+        margin: 16px 0 0;
+    }
+
+    .news-back-link:hover,
+    .news-pdf-link:hover {
+        background: var(--accent);
+        color: #020607;
+    }
+
+    .news-article h1 {
+        color: #fff;
+        font-size: clamp(2.2rem, 6vw, 4.8rem);
+        font-weight: 900;
+        line-height: 0.98;
+        margin: 14px 0 14px;
+        max-width: 840px;
+        text-transform: uppercase;
+    }
+
+    .news-subtitle {
+        color: #c7c7c7;
+        font-size: 1.16rem;
+        line-height: 1.55;
+        margin: 0 0 34px;
+    }
+
+    .news-article-media {
+        margin: 0 0 34px;
+    }
+
+    .news-article-media img {
+        aspect-ratio: 16 / 9;
+        border-radius: 8px;
+        display: block;
+        object-fit: cover;
+        width: 100%;
+    }
+
+    .news-article-media figcaption {
+        color: rgba(255,255,255,0.52);
+        font-size: 0.76rem;
+        line-height: 1.45;
+        margin-top: 10px;
+    }
+
+    .news-article-body {
+        color: #d8d8d8;
+        font-size: 1rem;
+        line-height: 1.78;
+        max-width: 760px;
+    }
+
+    .news-article-body p {
+        margin: 0 0 18px;
+    }
+
     .artist-page {
         padding: 72px 8% 110px;
     }
@@ -318,13 +788,15 @@
         position: relative;
         background: #111;
         isolation: isolate;
+        transform: scale(1);
+        transition: box-shadow 0.28s ease, transform 0.28s ease;
     }
 
     .artist-card::before {
-        background: linear-gradient(135deg, var(--card-accent), transparent 58%);
+        background: linear-gradient(135deg, rgba(0,242,255,0.9), transparent 58%);
         content: "";
         inset: 0;
-        opacity: 0.18;
+        opacity: 0;
         position: absolute;
         transition: opacity 0.25s ease;
         z-index: 1;
@@ -379,7 +851,7 @@
     }
 
     .artist-card:hover::before {
-        opacity: 0.34;
+        opacity: 0.16;
     }
 
     .artist-card:hover .artist-card-image {
@@ -391,6 +863,43 @@
     .artist-card:focus-within .artist-card-overlay {
         opacity: 1;
         transform: translateY(0);
+    }
+
+    .photo-intro {
+        display: grid;
+        gap: 22px;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 420px);
+    }
+
+    .photo-intro p {
+        align-self: end;
+        color: #c7c7c7;
+        font-size: 0.95rem;
+        line-height: 1.65;
+        margin: 0;
+    }
+
+    .photo-card {
+        aspect-ratio: 3 / 4;
+    }
+
+    .license-link {
+        border: 1px solid rgba(255,255,255,0.38);
+        border-radius: 6px;
+        color: #fff;
+        display: inline-flex;
+        font-size: 0.68rem;
+        font-weight: 700;
+        letter-spacing: 0.18em;
+        margin-top: 8px;
+        padding: 9px 11px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .license-link:hover {
+        border-color: var(--accent);
+        color: var(--accent);
     }
 
     /* 🔥 MOBILE FIX VINYL POSITION */
@@ -432,6 +941,67 @@
             min-height: 68vh;
         }
 
+        .news-hero,
+        .news-detail-hero {
+            min-height: 56vh;
+        }
+
+        .news-page,
+        .news-detail-page {
+            padding: 54px 20px 76px;
+        }
+
+        .home-news-highlight {
+            padding: 0 20px 76px;
+        }
+
+        .home-news-highlight-inner {
+            gap: 32px;
+            grid-template-columns: 1fr;
+            padding-top: 42px;
+        }
+
+        .home-news-media {
+            min-height: 220px;
+            order: -1;
+        }
+
+        .home-news-copy h1 {
+            font-size: clamp(1.25rem, 7vw, 1.75rem);
+        }
+
+        .news-row {
+            align-items: start;
+            gap: 14px;
+            grid-template-columns: 120px minmax(0, 1fr);
+            padding: 16px 0;
+        }
+
+        .news-row:hover,
+        .news-row:focus-visible {
+            transform: none;
+        }
+
+        .news-row img {
+            height: 82px;
+            width: 120px;
+        }
+
+        .news-row-copy h2 {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+
+        .news-row-copy p {
+            display: none;
+        }
+
+        .news-meta {
+            gap: 8px;
+            font-size: 0.62rem;
+            letter-spacing: 0.05em;
+        }
+
         .artist-page {
             padding: 54px 20px 76px;
         }
@@ -451,10 +1021,39 @@
             gap: 12px;
         }
 
+        .release-section {
+            padding: 54px 20px 76px;
+        }
+
+        .section-heading-row,
+        .photo-intro {
+            grid-template-columns: 1fr;
+        }
+
+        .release-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+            gap: 12px;
+        }
+
+        .release-info {
+            bottom: 14px;
+            left: 14px;
+            right: 14px;
+        }
+
+        .release-info h2 {
+            font-size: 0.88rem;
+        }
+
         .artist-card-overlay {
             opacity: 1;
             padding: 16px;
             transform: translateY(0);
+        }
+
+        .release-badges {
+            right: 10px;
+            top: 10px;
         }
 
         .artist-card-overlay h2 {

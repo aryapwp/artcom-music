@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Artist | Artcom Music Group</title>
-    <meta name="description" content="Publishing and Label artists from Artcom Music Group.">
-    <meta name="keywords" content="Artcom Music Group, Artist, Publishing, Label, Music">
+    <meta name="description" content="Press photos and photo licensing requests for Artcom Music Group artists.">
+    <meta name="keywords" content="Artcom Music Group, Artist, Press Photos, Licensing">
     <meta name="author" content="Artcom Music Group GmbH">
     <meta name="robots" content="index, follow">
 
@@ -14,12 +14,12 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.artcommusicgroup.com/artist">
     <meta property="og:title" content="Artist | Artcom Music Group">
-    <meta property="og:description" content="Publishing and Label artists from Artcom Music Group.">
+    <meta property="og:description" content="Press photos and photo licensing requests for Artcom Music Group artists.">
     <meta property="og:image" content="https://www.artcommusicgroup.com/images/Artcom_Musicgroup_Logo_Schwarz.jpg">
     <meta property="og:locale" content="de_DE">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260828-home-release-artist-style">
 </head>
 
 <body>
@@ -27,20 +27,11 @@
     $logoWhite = asset('images/Artcom_Musicgroup_Logo_Weiß.png');
     $placeholderImage = asset('images/Artcom_Musicgroup_Logo_Schwarz.jpg');
 
-    $publishingArtists = [
-        ['name' => 'Publishing Artist 01', 'image' => $placeholderImage, 'accent' => '#00f2ff'],
-        ['name' => 'Publishing Artist 02', 'image' => $placeholderImage, 'accent' => '#ff5f7e'],
-        ['name' => 'Publishing Artist 03', 'image' => $placeholderImage, 'accent' => '#f3b33d'],
-        ['name' => 'Publishing Artist 04', 'image' => $placeholderImage, 'accent' => '#72d572'],
-        ['name' => 'Publishing Artist 05', 'image' => $placeholderImage, 'accent' => '#9a7cff'],
-        ['name' => 'Publishing Artist 06', 'image' => $placeholderImage, 'accent' => '#5fd6b5'],
-    ];
-
-    $labelArtists = [
-        ['name' => 'Label Artist 01', 'image' => $placeholderImage, 'accent' => '#ff5f7e'],
-        ['name' => 'Label Artist 02', 'image' => $placeholderImage, 'accent' => '#72d572'],
-        ['name' => 'Label Artist 03', 'image' => $placeholderImage, 'accent' => '#00f2ff'],
-        ['name' => 'Label Artist 04', 'image' => $placeholderImage, 'accent' => '#f3b33d'],
+    $pressPhotos = [
+        ['name' => 'Artist 01', 'image' => $placeholderImage],
+        ['name' => 'Artist 02', 'image' => $placeholderImage],
+        ['name' => 'Artist 03', 'image' => $placeholderImage],
+        ['name' => 'Artist 04', 'image' => $placeholderImage],
     ];
 @endphp
 
@@ -54,6 +45,7 @@
 
         <div class="center-nav">
             <a href="/">Home</a>
+            <a href="/news">News</a>
             <a href="/artist" aria-current="page">Artist</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
@@ -63,50 +55,26 @@
     <div class="waveform-container" id="waveform"></div>
 </section>
 
-<main class="artist-page">
-    <header class="artist-intro">
-        <h1 style="font-size: 2.5rem;">Artist</h1>
+<main class="artist-page photo-page">
+    <header class="artist-intro photo-intro">
+        <h1>Artist</h1>
+        <p>Press photos only. Licensing requests can be started directly from each photo.</p>
     </header>
 
-    <nav class="artist-tabs" aria-label="Artist categories">
-        <a href="#publishing" class="artist-tab is-active">Publishing</a>
-        <a href="#label" class="artist-tab">Label</a>
-    </nav>
-
-    <section class="artist-section" id="publishing" data-section="publishing">
+    <section class="artist-section" aria-labelledby="press-photos-title">
         <div class="artist-section-heading">
-            <span>Publishing</span>
+            <span id="press-photos-title">Press photos</span>
         </div>
 
-        <div class="artist-grid">
-            @foreach ($publishingArtists as $artist)
-                <article class="artist-card" style="--card-accent: {{ $artist['accent'] }}">
+        <div class="artist-grid photo-grid">
+            @foreach ($pressPhotos as $photo)
+                <article class="artist-card photo-card">
                     <div class="artist-card-image">
-                        <img src="{{ $artist['image'] }}" alt="{{ $artist['name'] }}">
+                        <img src="{{ $photo['image'] }}" alt="{{ $photo['name'] }} press photo">
                     </div>
                     <div class="artist-card-overlay">
-                        <h2>{{ $artist['name'] }}</h2>
-                        <span>Detail</span>
-                    </div>
-                </article>
-            @endforeach
-        </div>
-    </section>
-
-    <section class="artist-section" id="label" data-section="label">
-        <div class="artist-section-heading">
-            <span>Label</span>
-        </div>
-
-        <div class="artist-grid">
-            @foreach ($labelArtists as $artist)
-                <article class="artist-card" style="--card-accent: {{ $artist['accent'] }}">
-                    <div class="artist-card-image">
-                        <img src="{{ $artist['image'] }}" alt="{{ $artist['name'] }}">
-                    </div>
-                    <div class="artist-card-overlay">
-                        <h2>{{ $artist['name'] }}</h2>
-                        <span>Detail</span>
+                        <h2>{{ $photo['name'] }}</h2>
+                        <a class="license-link" href="mailto:music@artcom-group.com?subject=Photo%20licensing%20request%20-%20{{ rawurlencode($photo['name']) }}">License photo</a>
                     </div>
                 </article>
             @endforeach
@@ -153,30 +121,6 @@
         window.addEventListener('resize', refreshCenterNavTop);
         refreshCenterNavTop();
     }
-
-    const tabs = Array.from(document.querySelectorAll('.artist-tab'));
-    const sections = Array.from(document.querySelectorAll('.artist-section'));
-
-    const setActiveTab = (id) => {
-        tabs.forEach((tab) => {
-            tab.classList.toggle('is-active', tab.getAttribute('href') === `#${id}`);
-        });
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-        const visible = entries
-            .filter((entry) => entry.isIntersecting)
-            .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
-
-        if (visible) {
-            setActiveTab(visible.target.id);
-        }
-    }, {
-        threshold: [0.25, 0.5, 0.75],
-        rootMargin: '-15% 0px -50% 0px',
-    });
-
-    sections.forEach((section) => observer.observe(section));
 </script>
 
 </body>

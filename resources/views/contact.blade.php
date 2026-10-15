@@ -22,7 +22,7 @@
     <meta property="og:locale" content="de_DE">
 
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20260828-home-release-artist-style">
 </head>
 
 <body>
@@ -37,6 +37,7 @@
 
         <div class="center-nav">
             <a href="/">Home</a>
+            <a href="/news">News</a>
             <a href="/artist">Artist</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>

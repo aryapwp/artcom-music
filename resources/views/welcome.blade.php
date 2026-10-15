@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261009-home-news-title">
 <!--
 <style>
     :root {
@@ -267,6 +267,27 @@
 
 <body>
 
+@php
+    $latestNews = config('news.0');
+
+    $releases = [
+        ['title' => 'Blick nach vorn', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/blick-nach-vorn.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Freiheit', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/freiheit.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Liebe siegt', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/liebe-siegt.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Marathon', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/marathon.jpg'), 'rights' => ['Pub']],
+        ['title' => 'Meine Zeit', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/meine-zeit.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Neue Perspektiven', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/neue-perspektiven.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Nur Liebe', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/nur-liebe.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Phönix aus der Asche', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/phoenix-aus-der-asche.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Wer liebt gewinnt', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/wer-liebt-gewinnt.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Die große Jubiläums-Edition', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/die-grosse-jubilaeums-edition.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Verdammt', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/verdammt.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Bunter Planet', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/bunter-planet.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Stärker', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/staerker.jpeg'), 'rights' => ['Pub']],
+        ['title' => 'Willkommen im Wunderland', 'artist' => 'Artcom Music Group', 'type' => 'Release', 'image' => asset('images/releases/willkommen-im-wunderland.jpeg'), 'rights' => ['Pub']],
+    ];
+@endphp
+
 
 <section class="hero">
     <div class="vinyl vinyl-top-right"></div>
@@ -277,7 +298,8 @@
         <div class="domain">www.artcommusicgroup.com</div>
 
         <div class="center-nav">
-            <a href="/">Home</a>
+            <a href="/" aria-current="page">Home</a>
+            <a href="/news">News</a>
             <a href="/artist">Artist</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
@@ -286,6 +308,55 @@
 
     <div class="waveform-container" id="waveform"></div>
 </section>
+
+<main class="home-main">
+    <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
+        <div class="section-kicker home-release-kicker">Selected releases</div>
+        <div class="section-heading-row home-release-heading">
+            <h1 id="singles-albums-title">Singles & Albums</h1>
+            <p>Eine Auswahl aktueller Cover und Editionen aus dem Artcom Music Group Katalog.</p>
+        </div>
+
+        <div class="release-grid home-release-grid">
+            @foreach ($releases as $release)
+                <article class="release-card" tabindex="0" aria-label="{{ $release['title'] }}">
+                    <img src="{{ $release['image'] }}" alt="{{ $release['title'] }} cover">
+                    <div class="release-badges" aria-label="Rights">
+                        @foreach ($release['rights'] as $right)
+                            <span class="release-badge release-badge-{{ strtolower($right) }}">{{ $right }}</span>
+                        @endforeach
+                    </div>
+                    <div class="release-info">
+                        <h2>{{ $release['title'] }}</h2>
+                    </div>
+                </article>
+            @endforeach
+        </div>
+    </section>
+
+    @if ($latestNews)
+        <section class="home-news-highlight" aria-labelledby="home-news-title">
+            <div class="home-news-highlight-inner">
+                <div class="home-news-copy">
+                    <div class="section-kicker">Latest news</div>
+                    <div class="news-meta">
+                        <span>{{ $latestNews['category'] }}</span>
+                        <time datetime="{{ \Carbon\Carbon::createFromFormat('d.m.Y', $latestNews['date'])->format('Y-m-d') }}">{{ $latestNews['date'] }} {{ $latestNews['time'] }}</time>
+                    </div>
+                    <h1 id="home-news-title">{{ $latestNews['title'] }}</h1>
+                    <p>{{ $latestNews['excerpt'] }}</p>
+                    <div class="home-news-actions">
+                        <a class="home-news-primary" href="{{ url('/news/' . $latestNews['slug']) }}">Read article</a>
+                        <a class="home-news-secondary" href="/news">Go to News</a>
+                    </div>
+                </div>
+                <a class="home-news-media" href="{{ url('/news/' . $latestNews['slug']) }}" aria-label="{{ $latestNews['title'] }}">
+                    <img src="{{ asset($latestNews['image']) }}" alt="{{ $latestNews['title'] }}">
+                </a>
+            </div>
+        </section>
+    @endif
+</main>
 
 <section class="impressum-section" id="impressum">
     <div class="impressum-left">IMPRESSUM</div>
@@ -298,7 +369,8 @@
         Axel-Springer-Str. 52, 10969 Berlin
 
         <strong>Managing director</strong>
-        Marko Wünsch
+        Marko Wünsch<br>
+        Ken Otremba
 
         <strong>Company registration number (HRB)</strong>
         HRB 212364 B Amtsgericht Berlin Charlottenburg
