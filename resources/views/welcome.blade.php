@@ -300,7 +300,7 @@
         <div class="center-nav">
             <a href="/" aria-current="page">Home</a>
             <a href="/news">News</a>
-            <a href="/artist">Artist</a>
+            {{-- Artist navigation is temporarily hidden. --}}
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -310,6 +310,7 @@
 </section>
 
 <main class="home-main">
+    {{-- Singles & Albums is temporarily hidden.
     <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
         <div class="section-kicker home-release-kicker">Selected releases</div>
         <div class="section-heading-row home-release-heading">
@@ -333,6 +334,7 @@
             @endforeach
         </div>
     </section>
+    --}}
 
     @if ($latestNews)
         <section class="home-news-highlight" aria-labelledby="home-news-title">
