@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261016-social-links">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261016-social-icons">
 <!--
 <style>
     :root {
@@ -387,8 +387,8 @@
         +49 (0) 30 / 206109-0
 
         <strong>Follow us</strong>
-        <a href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
-        <a href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
+        <a class="social-link" href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/linkedin.png') }}" alt="" aria-hidden="true">LinkedIn</a><br>
+        <a class="social-link" href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/instagram.png') }}" alt="" aria-hidden="true">Instagram</a>
     </div>
 </section>
 

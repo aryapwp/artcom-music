@@ -218,6 +218,19 @@
     .impressum-right a {
         color: var(--accent);
     }
+
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .social-link img {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+        filter: invert(83%) sepia(62%) saturate(1833%) hue-rotate(132deg) brightness(104%) contrast(102%);
+    }
     
     .impressum-right.grid {
         display: grid;
@@ -345,8 +358,8 @@
             +49 (0) 30 / 206109-0
 
             <strong>Follow us</strong>
-            <a href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
-            <a href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a class="social-link" href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/linkedin.png') }}" alt="" aria-hidden="true">LinkedIn</a><br>
+            <a class="social-link" href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/instagram.png') }}" alt="" aria-hidden="true">Instagram</a>
         </div>
     </div>
     <div class="impressum-left">DATENSCHUTZ</div>
