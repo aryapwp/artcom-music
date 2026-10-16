@@ -382,6 +382,19 @@
         color: var(--accent);
     }
 
+    .social-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+    }
+
+    .social-link img {
+        width: 15px;
+        height: 15px;
+        object-fit: contain;
+        filter: invert(83%) sepia(62%) saturate(1833%) hue-rotate(132deg) brightness(104%) contrast(102%);
+    }
+
     .impressum-right.grid {
         display: grid;
         grid-template-columns: 3fr 2fr; /* kiri lebih lebar */

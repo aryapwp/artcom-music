@@ -38,7 +38,9 @@
         <div class="center-nav">
             <a href="/">Home</a>
             <a href="/news" aria-current="page">News</a>
-            {{-- Artist navigation temporarily hidden. --}}
+            @if (config('site.features.artist_navigation'))
+                <a href="/artist">Artist</a>
+            @endif
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
