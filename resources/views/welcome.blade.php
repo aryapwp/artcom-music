@@ -381,6 +381,10 @@
         <strong>Contact email and phone number</strong>
         music@artcom-group.com<br>
         +49 (0) 30 / 206109-0
+
+        <strong>Follow us</strong>
+        <a href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+        <a href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
 </section>
 
