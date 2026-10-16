@@ -304,7 +304,9 @@
         <div class="center-nav">
             <a href="/" aria-current="page">Home</a>
             <a href="/news">News</a>
-            <a href="/artist">Artist</a>
+            @if (config('site.features.artist_navigation'))
+                <a href="/artist">Artist</a>
+            @endif
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -314,6 +316,7 @@
 </section>
 
 <main class="home-main">
+    @if (config('site.features.home_releases'))
     <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
         <div class="section-kicker home-release-kicker">Selected releases</div>
         <div class="section-heading-row home-release-heading">
@@ -337,6 +340,7 @@
             @endforeach
         </div>
     </section>
+    @endif
 
     @if ($latestNews)
         <section class="home-news-highlight" aria-labelledby="home-news-title">
