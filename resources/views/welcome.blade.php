@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261009-home-news-title">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261016-social-links">
 <!--
 <style>
     :root {
@@ -304,7 +304,7 @@
         <div class="center-nav">
             <a href="/" aria-current="page">Home</a>
             <a href="/news">News</a>
-            <a href="/artist">Artist</a>
+            {{-- Artist navigation temporarily hidden. --}}
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -314,6 +314,7 @@
 </section>
 
 <main class="home-main">
+    {{-- Singles & Albums temporarily hidden.
     <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
         <div class="section-kicker home-release-kicker">Selected releases</div>
         <div class="section-heading-row home-release-heading">
@@ -337,6 +338,7 @@
             @endforeach
         </div>
     </section>
+    --}}
 
     @if ($latestNews)
         <section class="home-news-highlight" aria-labelledby="home-news-title">

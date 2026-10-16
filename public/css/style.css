@@ -485,6 +485,10 @@
         margin-top: 15px;
     }
 
+    #impressum .impressum-right a {
+        color: var(--accent);
+    }
+
     .impressum-right.grid {
         display: grid;
         grid-template-columns: 3fr 2fr; /* kiri lebih lebar */
