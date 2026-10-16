@@ -206,6 +206,10 @@
         margin-top: 15px;
     }
 
+    .impressum-right a {
+        color: var(--accent);
+    }
+
     /* FOOTER */
     #contact {
         scroll-margin-top: 50px;

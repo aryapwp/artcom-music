@@ -214,6 +214,10 @@
         color: #fff;
         margin-top: 15px;
     }
+
+    .impressum-right a {
+        color: var(--accent);
+    }
     
     .impressum-right.grid {
         display: grid;
