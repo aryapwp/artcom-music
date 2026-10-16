@@ -38,7 +38,7 @@
         <div class="center-nav">
             <a href="/">Home</a>
             <a href="/news" aria-current="page">News</a>
-            {{-- Artist navigation temporarily hidden. --}}
+            <a href="/artist">Artist</a>
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
