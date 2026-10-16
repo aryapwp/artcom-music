@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261009-home-news-title">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261016-social-links">
 <!--
 <style>
     :root {
@@ -206,6 +206,10 @@
         margin-top: 15px;
     }
 
+    .impressum-right a {
+        color: var(--accent);
+    }
+
     /* FOOTER */
     #contact {
         scroll-margin-top: 50px;
@@ -300,7 +304,7 @@
         <div class="center-nav">
             <a href="/" aria-current="page">Home</a>
             <a href="/news">News</a>
-            {{-- Artist navigation is temporarily hidden. --}}
+            {{-- Artist navigation temporarily hidden. --}}
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -310,7 +314,7 @@
 </section>
 
 <main class="home-main">
-    {{-- Singles & Albums is temporarily hidden.
+    {{-- Singles & Albums temporarily hidden.
     <section class="release-section home-release-section" id="singles-albums" aria-labelledby="singles-albums-title">
         <div class="section-kicker home-release-kicker">Selected releases</div>
         <div class="section-heading-row home-release-heading">
@@ -383,6 +387,10 @@
         <strong>Contact email and phone number</strong>
         music@artcom-group.com<br>
         +49 (0) 30 / 206109-0
+
+        <strong>Follow us</strong>
+        <a href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+        <a href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
     </div>
 </section>
 

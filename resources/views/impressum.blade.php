@@ -214,6 +214,10 @@
         color: #fff;
         margin-top: 15px;
     }
+
+    .impressum-right a {
+        color: var(--accent);
+    }
     
     .impressum-right.grid {
         display: grid;
@@ -304,7 +308,7 @@
         <div class="center-nav">
             <a href="/">Home</a>
             <a href="/news">News</a>
-            {{-- Artist navigation is temporarily hidden. --}}
+            {{-- Artist navigation temporarily hidden. --}}
             <a href="/contact">Contact</a>
             <a href="/impressum">Impressum & Datenschutz</a>
         </div>
@@ -339,6 +343,10 @@
             <strong>Contact email and phone number</strong>
             music@artcom-group.com<br>
             +49 (0) 30 / 206109-0
+
+            <strong>Follow us</strong>
+            <a href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer">LinkedIn</a><br>
+            <a href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer">Instagram</a>
         </div>
     </div>
     <div class="impressum-left">DATENSCHUTZ</div>
