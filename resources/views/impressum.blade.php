@@ -229,7 +229,7 @@
         width: 15px;
         height: 15px;
         object-fit: contain;
-        filter: invert(83%) sepia(62%) saturate(1833%) hue-rotate(132deg) brightness(104%) contrast(102%);
+        filter: brightness(0) invert(1);
     }
     
     .impressum-right.grid {
