@@ -362,7 +362,8 @@
 
             <strong>Follow us</strong>
             <a class="social-link" href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/linkedin.png') }}" alt="" aria-hidden="true">LinkedIn</a><br>
-            <a class="social-link" href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/instagram.png') }}" alt="" aria-hidden="true">Instagram</a>
+            <a class="social-link" href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/instagram.png') }}" alt="" aria-hidden="true">Instagram</a><br>
+            <a class="social-link" href="https://www.facebook.com/p/Artcom-Music-Group-100078413444611/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/facebook.png') }}" alt="" aria-hidden="true">Facebook</a>
         </div>
     </div>
     <div class="impressum-left">DATENSCHUTZ</div>

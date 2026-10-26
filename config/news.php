@@ -2,6 +2,26 @@
 
 return [
     [
+        'slug' => 'die-tresenbrueder-artcom-music-group',
+        'category' => 'Signing News',
+        'date' => '20.10.2026',
+        'time' => '10:00',
+        'title' => 'Die Tresenbrüder unterschreiben bei der Artcom Music Group',
+        'subtitle' => 'Berliner Schnauze, ehrliches Songwriting und moderner Partyschlager',
+        'image' => 'images/news/tresenbrueder-signing.jpeg',
+        'pdf' => 'files/news/pressemitteilung-tresenbrueder-artcom.pdf',
+        'caption' => 'Felix Kahlbaum (Director A&R), Die Tresenbrüder, Florian Mollitor (Senior A&R & Product Manager)',
+        'excerpt' => 'Die Artcom Music Group hat ein neues Signing zu verkünden, das für gute Laune sorgt: Die Tresenbrüder kommen an Bord! Das Duo steht für die perfekte Mischung aus Berliner Schnauze, ehrlichem Songwriting und modernem Partyschlager, der mitreißend, humorvoll und wie gemacht für die große Fete ist.',
+        'body' => [
+            'Die Artcom Music Group hat ein neues Signing zu verkünden, das für gute Laune sorgt: Die Tresenbrüder kommen an Bord! Das Duo steht für die perfekte Mischung aus Berliner Schnauze, ehrlichem Songwriting und modernem Partyschlager, der mitreißend, humorvoll und wie gemacht für die große Fete ist. Mit ihrer Vertragsunterzeichnung bei der Artcom Music Group beginnt für Christopher Kürwitz und Damian Skowronek auch als Songwriter ein neues Kapitel, nachdem sie mit Songs wie „Bierdiplom“ und „Alles egal“ mit Buddy bereits erfolgreich abgeliefert haben.',
+            'Mit den Tresenbrüdern wurde ein rundherum gelungenes Partyschlager-Projekt ins Leben gerufen. Die zwei Sympathieträger, die ihre Wurzeln in der Berliner Rap-Szene haben und 2021 an The Voice of Germany teilnahmen, haben nun im Schlager- und Ballermann-Genre ihre wahre Heimat gefunden. Sie gehen ihren eigenen Weg und verbinden urbane Einflüsse konsequent mit einem modernen Party-Sound. Da sie alle Songtexte sowie Melodien komplett selbst schreiben, bringen sie eine völlig neue, frische Energie auf die Tanzfläche, die Menschen sofort zum Feiern bringt.',
+            'Die Tresenbrüder:',
+            '„Wir sind zwei Berliner Jungs, die einfach Bock haben, mit ihrer Musik Menschen zum Feiern zu bringen. Wir nehmen unsere Musik ernst, uns selbst aber nicht immer. Mit der Artcom Music Group haben wir ein Team an unserer Seite, das an uns und unsere Ideen glaubt. Wir haben noch einiges vor – und wer uns kennt, weiß: Bei den Tresenbrüdern bleibt es selten bei einer Runde!“',
+            'Die Artcom Music Group freut sich auf die Zusammenarbeit mit den Tresenbrüdern und wird das Duo bei den kommenden Projekten unterstützen.',
+            'Am Freitag den 23. Oktober 2026 erscheint die neue Single des Duos „Achterbahn“ bei der Artcom Music Group.',
+        ],
+    ],
+    [
         'slug' => 'gaby-baginsky-artcom-music-group',
         'category' => 'Signing News',
         'date' => '14.10.2026',
