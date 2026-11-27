@@ -10,8 +10,8 @@ return [
         'subtitle' => '',
         'image' => 'images/news/calimeros.png',
         'pdf' => 'files/news/pressemitteilung-calimeros-artcom.pdf',
-        'caption' => 'v. l. Felix Kahlbaum (Director A&R), Ilka Wolf, Florian Mollitor (Senior A&R & Product Manager)',
-        'excerpt' => 'Ilka Wolf hat sich bewusst Zeit für die Familie und das Leben abseits des Rampenlichts genommen und kehrt jetzt reicher, gereifter und mit jeder Menge zu erzählen zurück.',
+        'caption' => 'v.l. Felix Kahlbaum (Director A&R), Ken Otremba (CEO), Roland Eberhart (Calimeros),  Kathleen Herrmann (Consulting Music, Head of Video Production & TV Marketing), Florian Mollitor (Senior A&R & Product Manager) ',
+        'excerpt' => 'Die Artcom Music Group freut sich, mit den Calimeros eine der erfolgreichsten Schlagerformationen im deutschsprachigen Raum willkommen zu heißen.',
         'body' => [
             'Die Artcom Music Group freut sich, mit den Calimeros eine der erfolgreichsten Schlagerformationen im deutschsprachigen Raum willkommen zu heißen. Seit fünf Jahrzehnten begeistern die Schweizer Musiker ihr Publikum und haben sich mit ihren zahlreichen Hits einen festen Platz in der Schlagerwelt gesichert. Im Jahr ihres 50-jährigen Jubiläums freuen sich die Calimeros nun auf die Zusammenarbeit mit Artcom Music Group und viele weitere gemeinsame Projekte.',
             'Seit ihrer Gründung im Jahr 1976 haben sich die Calimeros zu einer festen Größe im deutschsprachigen Schlager entwickelt. Mit zahlreichen Nummer-eins-Alben in der Schweiz, erfolgreichen Chartplatzierungen in Deutschland und Österreich sowie einer treuen Fangemeinde blicken sie auf eine beeindruckende Karriere zurück. Besonders Roland Eberhart, der die Gruppe seit ihren Anfängen prägt, steht für den unverwechselbaren Sound der Calimeros und ihre Lieder über Liebe, Sehnsucht und Fernweh.',    
