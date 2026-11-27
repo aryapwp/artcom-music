@@ -24,7 +24,7 @@
 
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;700;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261019-social-links-clean">
+<link rel="stylesheet" href="{{ asset('css/style.css') }}?v=20261026-facebook-link">
 <!--
 <style>
     :root {
@@ -392,7 +392,8 @@
 
         <strong>Follow us</strong>
         <a class="social-link" href="https://www.linkedin.com/company/artcom-music-group-gmbh/posts/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/linkedin.png') }}" alt="" aria-hidden="true">LinkedIn</a><br>
-        <a class="social-link" href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/instagram.png') }}" alt="" aria-hidden="true">Instagram</a>
+        <a class="social-link" href="https://www.instagram.com/artcommusicgroup/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/instagram.png') }}" alt="" aria-hidden="true">Instagram</a><br>
+        <a class="social-link" href="https://www.facebook.com/p/Artcom-Music-Group-100078413444611/" target="_blank" rel="noopener noreferrer"><img src="{{ asset('images/facebook.png') }}" alt="" aria-hidden="true">Facebook</a>
     </div>
 </section>
 
